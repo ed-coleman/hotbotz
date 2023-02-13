@@ -1,0 +1,29 @@
+<h1>DELETE</h1>
+
+
+<h2>Are you sure you want to delete the below sauce?</h2>
+<form>
+<a href="/sauces/<%= editedSauceInfo._id %>/delete"><button>YES, DELETE SAUCE</button></a> 
+</form>
+<a href="/sauces/<%= editedSauceInfo._id %>/edit"><button>NO, Just EDIT SAUCE</button></a> 
+
+<hr>
+
+
+<div id="sauceInfo">
+    <img src="<%= editedSauceInfo.image %>" width="300">
+    <p><span class="bold">Name: </span><%= editedSauceInfo.name %></p>
+    <p><span class="bold">Ingredients: </span><%= editedSauceInfo.ingredients %></p>
+    <p><span class="bold">Peppers: </span><%= editedSauceInfo.peppers %></p>
+    <p><span class="bold">Description: </span><%= editedSauceInfo.description %></p>
+    <p><span class="bold">Scoville: </span><%= editedSauceInfo.scoville %></p>
+    <p><span class="bold">Origin Country: </span><%= editedSauceInfo.originCountry %></p>
+    <p><span class="bold">Manufacturer: </span><%= editedSauceInfo.manufacturer %></p>
+    <p><span class="bold">Added By: </span><%= editedSauceInfo.addedBy.username %></p>
+    <p><span class="bold">Buy this sauce: </span><a href="<%= editedSauceInfo.link %>" target="_blank">Website</a></p>
+
+   
+
+
+</div>
+

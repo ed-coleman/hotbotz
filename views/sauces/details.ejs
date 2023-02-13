@@ -16,7 +16,8 @@
 
 
 <% if (user.username === selectedSauce.addedBy.username) { %>
-<a href="/sauces/<%= selectedSauce._id %>/edit"><button>EDIT SAUCE</button></a>
+    <a href="/sauces/<%= selectedSauce._id %>/edit"><button>EDIT SAUCE</button></a> 
+    <a href="/sauces/<%= selectedSauce._id %>/delete"><button>DELETE SAUCE</button></a> 
 <% } %>
 
 

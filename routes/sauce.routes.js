@@ -111,7 +111,6 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
       router.get("/:id/edit", isLoggedIn, async (req, res) => {
         const editedSauceId = req.params.id
         const editedSauceInfo = await Sauce.findById(editedSauceId)
-        console.log(editedSauceInfo)
         res.render("sauces/edit", {user:req.session.user, editedSauceInfo})
     });
     
@@ -127,6 +126,14 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
 
       res.redirect(`/sauces/${editedSauceId}`)
   });
+
+
+  /*DELETE HOT SAUCE ENTRY*/
+  router.get("/:id/delete", isLoggedIn, async (req, res) => {
+    const editedSauceId = req.params.id
+    const editedSauceInfo = await Sauce.findById(editedSauceId)
+    res.render("sauces/delete", {user:req.session.user, editedSauceInfo})
+});
   
     
 module.exports = router;
