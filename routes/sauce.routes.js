@@ -105,5 +105,28 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
         console.log("Sauce details page failed to render", error)
       }
     });
+
+
+      /*EDIT DETAILS TO HOT SAUCE ENTRY*/
+      router.get("/:id/edit", isLoggedIn, async (req, res) => {
+        const editedSauceId = req.params.id
+        const editedSauceInfo = await Sauce.findById(editedSauceId)
+        res.render("sauces/edit", {user:req.session.user, editedSauceInfo})
+    });
+    
   
+    router.post("/:id/edit", isLoggedIn, async (req, res) => {
+      const editedSauce = req.body
+      const editedSauceId = req.params.id
+      console.log("editedSauce: ", editedSauce)
+      const selectedSauce = await Sauce.findById(editedSauceId)
+      console.log("selectedSauce: ", selectedSauce)
+      await Sauce.findByIdAndUpdate(editedSauceId, editedSauce)
+
+      const randomSauces = await Sauce.aggregate([ { $sample: { size: 5 } } ]).limit(5)
+
+      res.render("sauces/details", {user:req.session.user, selectedSauce, randomSauces, update:true})
+  });
+  
+    
 module.exports = router;
