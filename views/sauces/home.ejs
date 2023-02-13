@@ -50,7 +50,17 @@
                       .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
                       .join(' ')%>
                       <br/>
-                      <span style="color:red;"><%= sauce.createdAt %></span>
+
+<% 
+let createdAtDate = sauce.createdAt
+let createdAt = createdAtDate
+let day = createdAt.getDate()
+let month = createdAt.getMonth()+1 
+let year = createdAt.getYear()-100
+let createdAtDateReformatted = day + "/" + month + "/" + year;
+%>
+
+                      <span style="color:red;font-weight:bold"><%= createdAtDateReformatted %></span>
                     </h5>
                     </div>
                 </div>
@@ -83,7 +93,7 @@
                                   .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
                                   .join(' ')%>
                                   <br/>
-                                  <span style="color:red;"><%= sauce.scoville %> SHU</span>
+                                  <span style="color:red;font-weight:bold"><%= sauce.scoville %> SHU</span>
                                   
                                 </h5>
                    
