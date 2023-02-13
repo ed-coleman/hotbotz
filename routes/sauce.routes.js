@@ -94,7 +94,6 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
     /* GET DEAILTED SAUCE PAGE SAUCE */
     router.get("/:id", isLoggedIn, async (req, res) => {
       try {
-        console.log("user", req.session.user)
         //get specific sauce details
         const sauceId = req.params.id
         const selectedSauce = await Sauce.findById(sauceId).populate("addedBy")
@@ -119,14 +118,16 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
     router.post("/:id/edit", isLoggedIn, async (req, res) => {
       const editedSauce = req.body
       const editedSauceId = req.params.id
-      console.log("editedSauce: ", editedSauce)
+      console.log(editedSauce)
       const selectedSauce = await Sauce.findById(editedSauceId)
-      console.log("selectedSauce: ", selectedSauce)
-      await Sauce.findByIdAndUpdate(editedSauceId, editedSauce)
+      console.log("selectedSauce", selectedSauce)
+      const updatedSauce = await Sauce.findByIdAndUpdate(editedSauceId, editedSauce, {new:true})
+      console.log("updatedSauce", updatedSauce)
 
-      const randomSauces = await Sauce.aggregate([ { $sample: { size: 5 } } ]).limit(5)
+      //const randomSauces = await Sauce.aggregate([ { $sample: { size: 5 } } ]).limit(5)
 
-      res.render("sauces/details", {user:req.session.user, selectedSauce, randomSauces, update:true})
+      //res.render("sauces/details", {user:req.session.user, selectedSauce, randomSauces, update:true})
+      res.redirect(`/sauces/${editedSauceId}`)
   });
   
     

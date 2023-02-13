@@ -42,7 +42,7 @@ const sauceSchema = new Schema(
       default: "No Link Provided"
     },
     addedBy: {
-      type: Schema.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: 'User', 
       required:true
     }
