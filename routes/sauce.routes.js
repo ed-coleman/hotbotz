@@ -70,6 +70,9 @@ router.get("/home", isLoggedIn, async (req, res) => {
 router.post("/add-details", isLoggedIn, async (req, res) => {
   try {
 
+    if(req.body.image == ""){
+      req.body.image = undefined
+    }
 
       req.body.addedBy = req.session.user._id
     
@@ -105,5 +108,41 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
         console.log("Sauce details page failed to render", error)
       }
     });
+
+
+      /*EDIT DETAILS TO HOT SAUCE ENTRY*/
+      router.get("/:id/edit", isLoggedIn, async (req, res) => {
+        const editedSauceId = req.params.id
+        const editedSauceInfo = await Sauce.findById(editedSauceId)
+        res.render("sauces/edit", {user:req.session.user, editedSauceInfo})
+    });
+    
   
+    router.post("/:id/edit", isLoggedIn, async (req, res) => {
+      const editedSauce = req.body
+      const editedSauceId = req.params.id
+      console.log(editedSauce)
+      const selectedSauce = await Sauce.findById(editedSauceId)
+      console.log("selectedSauce", selectedSauce)
+      const updatedSauce = await Sauce.findByIdAndUpdate(editedSauceId, editedSauce, {new:true})
+      console.log("updatedSauce", updatedSauce)
+
+      res.redirect(`/sauces/${editedSauceId}`)
+  });
+
+
+  /*DELETE HOT SAUCE ENTRY*/
+  router.get("/:id/delete", isLoggedIn, async (req, res) => {
+    const editedSauceId = req.params.id
+    const editedSauceInfo = await Sauce.findById(editedSauceId)
+    res.render("sauces/delete", {user:req.session.user, editedSauceInfo})
+});
+
+router.post("/:id/delete", isLoggedIn, async (req, res) => {
+  const deletedSauceId = req.params.id
+  const deleteSauce = await Sauce.deleteOne({_id: deletedSauceId})
+  res.redirect('/sauces/home')
+});
+  
+    
 module.exports = router;

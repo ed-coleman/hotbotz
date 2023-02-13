@@ -12,7 +12,7 @@ const sauceSchema = new Schema(
     image: {
       type:String, 
       required: true,
-      default:"https://thumbs.dreamstime.com/b/sauce-bottle-icon-fire-hot-symbol-vector-illustration-195916617.jpg"
+      default:"/images/sauce-image-fallback.png"
     },
     ingredients: {
       type: String, 
@@ -42,7 +42,7 @@ const sauceSchema = new Schema(
       default: "No Link Provided"
     },
     addedBy: {
-      type: Schema.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: 'User', 
       required:true
     }
