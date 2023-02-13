@@ -3,13 +3,6 @@
   src: url('/fonts/SnackerComicPersonalUseOnly-g3Z5.ttf');
 }
 
-
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  
-}
-
 #navWrapper {
   font-family: 'Sofia Sans Condensed', sans-serif;
   height: 20px;
@@ -17,7 +10,8 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: baseline;
+  margin-top: 30px;
 
 }
 
@@ -62,7 +56,7 @@ a:active {
   font-size: 80px;
   color: black;
   text-decoration: none !important;
-  margin: 60px;
+  margin: 70px;
   margin-top: 0;
 }
 
@@ -78,11 +72,11 @@ a:active {
 #errorMessage {
   font-family: 'Sofia Sans Condensed', sans-serif;
   font-size: 30px !important;
-  margin: 0 !important;
+  margin-bottom: 30px !important;
 }
 
 #loginWindow {
-  height: 600px;
+  height: 700px;
   width: 650px;
   display: flex;
   flex-direction: column;
@@ -94,7 +88,7 @@ a:active {
   font-family: 'Sofia Sans Condensed', sans-serif;
   font-size: 30px;
   width: 500px;
-  height: 300px;
+  height: 400px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -110,9 +104,10 @@ a:active {
 
 
 #loginForm input {
-  height: 20px;
+  height: 30px;
   width: 350px;
-  padding: 5px;
+  padding: 10px;
+  font-size: large;
 }
 #loginForm label {
   font-family: 'Sofia Sans Condensed', sans-serif;
@@ -131,7 +126,8 @@ a:active {
   margin-left: 20px;
   margin-bottom: 50px;
   margin-top: 20px;
-  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.15)
+  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.15);
+  text-decoration: none !important;
 }
 
 #submitLogin:hover {
@@ -145,8 +141,8 @@ a:active {
 }
 
 #logo {
-  margin-left: 70px;
-  margin-top: 50px;
+  margin-left: 65px;
+  margin-top: 100px;
   margin-bottom: 10px;
   height: 300px;
   width: 300px;
@@ -163,11 +159,73 @@ label {
 
 #welcomeWrapper {
   margin-top: 150px;
-  font-family: 'Sofia Sans Condensed', sans-serif; ;
+  font-family: 'Sofia Sans Condensed', sans-serif;
   font-size: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+#sauceDisplay {
+  margin-top: 150px;
+  border: #f94f04;
+  border-style: none;
+  border-width: 2px;
+  
+}
+
+#headerWrapper {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+#addContainer {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-size: x-large;
+  margin-top: 150px;
+  border: #f94f04;
+  border-style: none;
+  border-width: 2px;
+  padding: 50px;
+}
+
+#addSauceSearchForm input {
+  width: 655px;
+  
+}
+
+#addSauceSearchForm label {
+  padding-top: 20px;
+}
+
+
+
+#addSauceSearchForm button {
+  margin-left: 180px;
+  margin-top: 50px;
+}
+
+#addSauceDetailsForm {
+
+font-family: 'Sofia Sans Condensed', sans-serif;
+font-size: larger;
+width: 50px;
+height: 40px;
+flex-direction: column;
+background: rgba(230, 230, 230, .25);
+}
+
+#addSauceDetailsForm input {
+  width: 500px;
+}
+
+#addSauceFormContainer { 
+  margin-top: 160px;
+  margin-left: 60px;
+ 
+
 }
 
 

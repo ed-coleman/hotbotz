@@ -1,8 +1,14 @@
-<h1>ADD MORE SAUCE DETAILS</h1>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
+  </head>
 
-<h2></h2>
-<h2>Add more details</h2>
-<form action="/sauces/add-details" method="POST">
+<div id="addSauceFormContainer">
+    <div id="headerWrapper">
+<h2>Tell us more about the sauce:</h2>
+</div>
+<form id="addSauceDetailsForm" action="/sauces/add-details" method="POST">
     
     <label>Name: <input type="text" name="name" value="<%= addedSauce %>" style="border:none" readonly/></label><br/>
     <label>Manufacturer: <input type="text" name="manufacturer" placeholder="Required"/></label><br/>
@@ -215,9 +221,10 @@
     <label>Link: <input type="text" name="link"/></label><br/>
 
   
-    <button type="submit">Add sauce</button>
+    <button id="submitLogin" type="submit">Add sauce</button>
 
 </form>
+</div>
 
 <% if (typeof errorMessage !== 'undefined') { %>
     <p style="color: red"><%= errorMessage %></p>

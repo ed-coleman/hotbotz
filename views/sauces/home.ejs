@@ -1,10 +1,13 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
+</head>
+
 <div class="container text-center">
-    <div class="row align-items-start">
-      <div class="col" style="width:90%">
 
-        <h2>Browse hot sauces</h2>
-
-        <div style="display:flex;flex-wrap: wrap;">
+        <div id="sauceDisplay" style="display:flex;flex-wrap: wrap;">
+        
             <% topSauces.forEach(sauce => { %>
            
                     <div class="card" style="width: 10rem;margin:10px;">
@@ -25,32 +28,19 @@
                    <% }) %>
            
            </div>
+          
 
 
-           
-
-
-      </div>
-      <div class="col" style="width:10%">
-
-
-        <h2>Add a hot sauce</h2>
-            <div class="card" style="width: 100%;margin:10px;">
-                <div class="card-body">
-                    
-                    <p>Can't see the sauce you're looking for?</p>
-                    <a href="add" class="btn btn-primary">Add a hot sauce</a>
-                  </div>
-            </div>
-
-
-
+      <div id="sauceDisplay" class="col">
+          
+<div id="headerWrapper">
             <h2>Recently added</h2>
+          </div>
 
             <div style="display:flex;flex-wrap: wrap;">
                 <% mostRecentSauce.forEach(sauce => { %>
 
-                <div class="card" style="width: 10rem;margin:10px;">
+                <div  class="card" style="width: 10rem;margin:10px;">
                     <img src="<%= sauce.image %>" class="card-img-top" alt="<%= sauce.name %>" width="30">
                     <div class="card-body">
                     <h5 class="card-title">
@@ -66,11 +56,12 @@
 
                 <% }) %>
             </div>
+          </div>
 
 
 
-      </div>
-    </div>
+      
+  
   </div>
 
        
