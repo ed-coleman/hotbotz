@@ -4,10 +4,18 @@
     <ul style="display:flex;gap:15px;list-style:none;">
         <li><a href="/sauces/home">Browse Sauces</a></li>
         <li><a href="/sauces/add">Add Sauce</a></li>
-        <li><a href="/auth/profile">Profile</a></li>
-      <li><a href="/auth/logout">Logout</a></li>
-        <li><a href="/auth/signup">Signup</a></li>
-        <li><a href="/auth/login">Login</a></li>
+
+<% if (!user) { %>
+  <li><a href="/auth/signup">Signup</a></li>
+  <li><a href="/auth/login">Login</a></li>
+ 
+<% } %>
+<% if (user) { %>
+ <li><a href="/auth/profile">Profile</a></li>
+ <li><a href="/auth/logout">Logout</a></li>
+<% } %>
+
+        
     </ul>
   </div>
   <div id="blackLine"></div>
