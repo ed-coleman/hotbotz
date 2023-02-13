@@ -70,6 +70,9 @@ router.get("/home", isLoggedIn, async (req, res) => {
 router.post("/add-details", isLoggedIn, async (req, res) => {
   try {
 
+    if(req.body.image == ""){
+      req.body.image = undefined
+    }
 
       req.body.addedBy = req.session.user._id
     
