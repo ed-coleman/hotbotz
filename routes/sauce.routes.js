@@ -3,6 +3,11 @@ const router = express.Router();
 const { isLoggedIn, isLoggedOut } = require('../middleware/route-guard');
 const Sauce = require('../models/Sauce.model');
 
+
+router.get("/", isLoggedIn, async (req, res) => {
+  res.redirect('/sauces/home')
+});
+
 /* GET HOME PAE */
 router.get("/home", isLoggedIn, async (req, res) => {
     try {
