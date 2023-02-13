@@ -2,7 +2,7 @@
 
 
 <h2>Are you sure you want to delete the below sauce?</h2>
-<form>
+<form action="/sauces/<%= editedSauceInfo._id %>/delete" method="post">
 <a href="/sauces/<%= editedSauceInfo._id %>/delete"><button>YES, DELETE SAUCE</button></a> 
 </form>
 <a href="/sauces/<%= editedSauceInfo._id %>/edit"><button>NO, Just EDIT SAUCE</button></a> 

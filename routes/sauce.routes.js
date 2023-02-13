@@ -134,6 +134,12 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
     const editedSauceInfo = await Sauce.findById(editedSauceId)
     res.render("sauces/delete", {user:req.session.user, editedSauceInfo})
 });
+
+router.post("/:id/delete", isLoggedIn, async (req, res) => {
+  const deletedSauceId = req.params.id
+  const deleteSauce = await Sauce.deleteOne({_id: deletedSauceId})
+  res.redirect('/sauces/home')
+});
   
     
 module.exports = router;
