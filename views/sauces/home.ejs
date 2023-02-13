@@ -49,12 +49,75 @@
                       .split(' ')
                       .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
                       .join(' ')%>
+                      <br/>
+                      <span style="color:red;"><%= sauce.createdAt %></span>
                     </h5>
                     </div>
                 </div>
 
                 <% }) %>
             </div>
+          </div>
+
+
+
+
+
+          <div id="sauceDisplay" class="col">
+          
+            <div id="headerWrapper">
+                        <h2>Hottest</h2>
+                      </div>
+            
+                        <div style="display:flex;flex-wrap: wrap;">
+                            <% hottestSauces.forEach(sauce => { %>
+            
+                            <div id="sauceCard" class="card" style="width: 10rem;margin:10px;">
+                              
+                              <a id="sauceImage" href="<%= sauce._id %>"><img id="sauceImage"  src="<%= sauce.image %>" class="card-img-top" alt="<%= sauce.name %>" width="30"></a>
+                                <div id="cardBody" class="card-body">
+                                <h5  class="card-title">
+                                  <% const sauceName = sauce.name%>
+                                  <%= sauceName.toLowerCase()
+                                  .split(' ')
+                                  .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+                                  .join(' ')%>
+                                  <br/>
+                                  <span style="color:red;"><%= sauce.scoville %> SHU</span>
+                                  
+                                </h5>
+                   
+                                  
+                                </div>
+                            </div>
+            
+                            <% }) %>
+                        </div>
+          </div>
+
+
+
+
+
+          <div id="sauceDisplay" class="col">
+          
+            <div id="headerWrapper">
+                        <h2>Highest rated</h2>
+                      </div>
+            
+                      <h3>Coming SOON</h3>
+          </div>
+
+
+
+          
+          <div id="sauceDisplay" class="col">
+          
+            <div id="headerWrapper">
+                        <h2>Most reviewed</h2>
+                      </div>
+            
+                      <h3>Coming SOON</h3>
           </div>
 
 

@@ -8,8 +8,9 @@ router.get("/home", isLoggedIn, async (req, res) => {
     try {
         const topSauces = await Sauce.aggregate([ { $sample: { size: 14 } } ]).limit(14)
         const mostRecentSauce = await Sauce.find().sort( { "createdAt": -1 } ).limit(7)
+        const hottestSauces = await Sauce.find().sort( { "scoville": -1 } ).limit(7)
         //console.log("mostRecentSauce: ", mostRecentSauce)
-        res.render("sauces/home", {user:req.session.user, topSauces, mostRecentSauce})
+        res.render("sauces/home", {user:req.session.user, topSauces, mostRecentSauce, hottestSauces})
     } catch (error) {
         console.log("Home page could not display")
     }
