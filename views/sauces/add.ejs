@@ -1,0 +1,35 @@
+<h1>ADD SAUCE</h1>
+<p>Type in the hot sauce you would like to add to check if it already exists in our database</p>
+<form action="/sauces/add" method="POST">
+    <input type="text" name="name"/>
+  
+    <button type="submit">Continue</button>
+
+</form>
+
+<% if (typeof errorMessage !== 'undefined') { %>
+    <p style="color: red"><%= errorMessage %></p>
+
+    <% if (errorCode == 0) { %>
+        
+        
+        <div style="display:flex;flex-wrap: wrap;">
+            <% sauceMatch.forEach(sauce => { %>
+
+            <div class="card" style="width: 10rem;margin:10px;">
+                <img src="<%= sauce.image %>" class="card-img-top" alt="<%= sauce.name %>" width="30">
+                <div class="card-body">
+                <h5 class="card-title">
+                    <%=sauce.name%>
+                </h5>
+                <a href="<%= sauce._id %>" class="btn btn-secondary">View Sauce</a>
+                </div>
+            </div>
+
+            <% }) %>
+        </div>
+
+        <% } %>
+    <% } %>
+
+   
