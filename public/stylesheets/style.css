@@ -142,7 +142,7 @@ a:active {
 
 #logo {
   margin-left: 65px;
-  margin-top: 100px;
+  margin-top: 120px;
   margin-bottom: 10px;
   height: 300px;
   width: 300px;
@@ -166,20 +166,33 @@ label {
   align-items: flex-start;
 }
 
+
 #sauceDisplay {
-  margin-top: 150px;
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  margin-top: 100px;
   border: #f94f04;
   border-style: none;
   border-width: 2px;
   
+  
 }
 
-#headerWrapper {
-  font-family: 'Sofia Sans Condensed', sans-serif;
+#cardBody {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
+  align-items: center;
+  justify-content: flex-end
 }
+
+#sauceImage {
+  margin-top: 15px;
+  min-height: 240px;
+ max-height: 240px;
+}
+
+
+
+
+
 
 #addContainer {
   font-family: 'Sofia Sans Condensed', sans-serif;
@@ -198,6 +211,12 @@ label {
 
 #addSauceSearchForm label {
   padding-top: 20px;
+}
+
+#headerWrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
 }
 
 

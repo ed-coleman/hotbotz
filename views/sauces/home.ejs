@@ -10,9 +10,9 @@
         
             <% topSauces.forEach(sauce => { %>
            
-                    <div class="card" style="width: 10rem;margin:10px;">
-                       <img src="<%= sauce.image %>" class="card-img-top" alt="<%= sauce.name %>" width="30">
-                       <div class="card-body">
+                    <div id='cardBody' class="card" style="width: 10rem;margin:10px;">
+                      <a  href="<%= sauce._id %>"><img id="sauceImage"src="<%= sauce.image %>" class="card-img-top" alt="<%= sauce.name %>" width="30"></a>
+                       <div id="cardBody" class="card-body">
                          <h5 class="card-title">
                             <% const sauceName = sauce.name%>
                             <%= sauceName.toLowerCase()
@@ -20,7 +20,6 @@
                             .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
                             .join(' ')%>
                         </h5>
-                         <a href="<%= sauce._id %>" class="btn btn-secondary">View Sauce</a>
                        </div>
                      </div>
                     
@@ -40,17 +39,17 @@
             <div style="display:flex;flex-wrap: wrap;">
                 <% mostRecentSauce.forEach(sauce => { %>
 
-                <div  class="card" style="width: 10rem;margin:10px;">
-                    <img src="<%= sauce.image %>" class="card-img-top" alt="<%= sauce.name %>" width="30">
-                    <div class="card-body">
-                    <h5 class="card-title">
+                <div id="sauceCard" class="card" style="width: 10rem;margin:10px;">
+                  
+                  <a id="sauceImage" href="<%= sauce._id %>"><img id="sauceImage"  src="<%= sauce.image %>" class="card-img-top" alt="<%= sauce.name %>" width="30"></a>
+                    <div id="cardBody" class="card-body">
+                    <h5  class="card-title">
                       <% const sauceName = sauce.name%>
                       <%= sauceName.toLowerCase()
                       .split(' ')
                       .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
                       .join(' ')%>
                     </h5>
-                    <a href="<%= sauce._id %>" class="btn btn-secondary">View Sauce</a>
                     </div>
                 </div>
 
