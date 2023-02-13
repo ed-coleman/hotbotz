@@ -94,6 +94,7 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
     /* GET DEAILTED SAUCE PAGE SAUCE */
     router.get("/:id", isLoggedIn, async (req, res) => {
       try {
+        console.log("user", req.session.user)
         //get specific sauce details
         const sauceId = req.params.id
         const selectedSauce = await Sauce.findById(sauceId).populate("addedBy")

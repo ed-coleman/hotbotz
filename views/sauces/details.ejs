@@ -12,11 +12,17 @@
 <p><span class="bold">Origin Country: </span><%= selectedSauce.originCountry %></p>
 <p><span class="bold">Manufacturer: </span><%= selectedSauce.manufacturer %></p>
 <p><span class="bold">Added By: </span><%= selectedSauce.addedBy.username %></p>
+<p><span class="bold">Buy this sauce: </span><a href="<%= selectedSauce.link %>" target="_blank">Website</a></p>
 
-<a href="<%= selectedSauce.link %>" target="_blank">Buy this sauce</a>
+
+<% if (user.username === selectedSauce.addedBy.username) { %>
+<a href="/sauces/<%= selectedSauce._id %>/edit"><button>EDIT SAUCE</button></a>
+<% } %>
+
+
 </div>
 
-//REVIEWS
+
 <hr>
 <h2>Reviews</h2>
 <h3>Review title - "OMG MUST TRY!"</h3>
@@ -36,7 +42,7 @@
 
 
 
-//RANDOM SAUCES
+
 <h2>You might also like these...</h2>
 
 <div style="display:flex;flex-wrap: wrap;">
