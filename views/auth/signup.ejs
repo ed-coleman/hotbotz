@@ -1,12 +1,20 @@
-<h1>Signup</h1>
-<form action="/auth/signup" method="POST">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<div id="loginWindow">
+<form id="loginForm" action="/auth/signup" method="POST">
+    <p>SIGN UP</p>
     <label>Username: <input type="text" name="username"/></label>
     <label>Password: <input type="password" name="password"/></label>
     
-    <button type="submit">Sign Up</button>
+    <button id="submitLogin" type="submit">Sign Up</button>
 
 </form>
+</div>
 
 <% if (typeof errorMessage !== 'undefined') { %>
-    <p style="color: red"><%= errorMessage %></p>
+    <p id="errorMessage" style="color: red"><%= errorMessage %></p>
     <% } %>

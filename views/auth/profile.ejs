@@ -1,3 +1,15 @@
-<h1>Profile</h1>
-<p>Hello <%= user.username %></p>
-<p>Member Since: <%= user.createdAt %></p>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<div id="welcomeWrapper">
+<p>Hi <%= user.username %>!</p>
+<p>Lost in the sauce since: <%= user.createdAt %></p>
+</div>
+<div>
+    <button onclick="window.location.href='/auth/login'">See what&apos;s new</button>
+    <button onclick="window.location.href='/auth/profile'">Your Profile</button>
+    
+</div>

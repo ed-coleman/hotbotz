@@ -1,16 +1,173 @@
+@font-face {
+  font-family: logo;
+  src: url('/fonts/SnackerComicPersonalUseOnly-g3Z5.ttf');
+}
+
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
 }
 
-a {
-  color: #00b7ff;
+#navWrapper {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  height: 20px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
 }
 
-h1 {
-  color: 15px;
+a:hover {
+  text-decoration-line: underline !important;
+  text-decoration-thickness: 1.5px !important;
 }
 
-.bold {
-font-weight:bold;
+a:active {
+  color: #04912e !important;
 }
+
+#navBar a {
+  padding: 5px;
+  color: #f94f04;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+
+
+#navBar h1 {
+  font-family: logo;
+  font-size: 80px;
+  color: #04912e;
+  margin-left: 20px;
+}
+
+#navLogo {
+  height: 100px;
+  width: 100px;
+  padding-bottom: 20px;
+}
+
+#homeLinks {
+  display: flex;
+  margin: auto;
+}
+
+#homeLinks a {
+  font-family: logo;
+  font-size: 80px;
+  color: black;
+  text-decoration: none !important;
+  margin: 60px;
+  margin-top: 0;
+}
+
+#homeLinks a:hover {
+  color: #f94f04;
+}
+
+#homeLinks a:active {
+  transform: translateY(2px) ;
+  color: #f94f04 !important;
+}
+
+#errorMessage {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-size: 30px !important;
+  margin: 0 !important;
+}
+
+#loginWindow {
+  height: 600px;
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center; 
+}
+
+#loginForm {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-size: 30px;
+  width: 500px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(230, 230, 230, .25);
+  padding: 50px;
+  margin: auto;
+  border: #04912e;
+  border-width: 1px;
+  border-style: solid;
+}
+
+
+
+
+#loginForm input {
+  height: 20px;
+  width: 350px;
+  padding: 5px;
+}
+#loginForm label {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+#submitLogin {
+  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-size: 25px;
+  color: black;
+  width: 120px;
+  border: solid;
+  padding: 10px;
+  border-radius: 6px;
+  border-color: black;
+  border-width: 2px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.15)
+}
+
+#submitLogin:hover {
+  color:white;
+  background-color: #f94f04;
+  border-color: white
+}
+
+#submitLogin:active {
+  transform: translateY(2.5px);
+}
+
+#logo {
+  margin-left: 70px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  height: 300px;
+  width: 300px;
+}
+
+label, input {
+  display: block;
+}
+
+label {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+#welcomeWrapper {
+  margin-top: 150px;
+  font-family: 'Sofia Sans Condensed', sans-serif; ;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
