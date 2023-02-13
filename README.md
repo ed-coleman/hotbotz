@@ -4,7 +4,8 @@
 
 ```
 npm i
-npm run seed
+npm run seed-sauces
+npm run seed-users
 
 ``` 
 
