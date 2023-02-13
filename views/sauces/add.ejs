@@ -1,14 +1,24 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
+  </head>
+<div id="addContainer">
+    <div id="headerWrapper">
 <h1>ADD SAUCE</h1>
+</div>
 <p>Type in the hot sauce you would like to add to check if it already exists in our database</p>
-<form action="/sauces/add" method="POST">
+<form id="addSauceSearchForm" action="/sauces/add" method="POST">
+    <label>
     <input type="text" name="name"/>
-  
-    <button type="submit">Continue</button>
+    <button id="submitLogin"type="submit">Continue</button>
+    </label>
 
 </form>
+</div>
 
 <% if (typeof errorMessage !== 'undefined') { %>
-    <p style="color: red"><%= errorMessage %></p>
+    <p id="errorMessage" style="color: red"><%= errorMessage %></p>
 
     <% if (errorCode == 0) { %>
         
