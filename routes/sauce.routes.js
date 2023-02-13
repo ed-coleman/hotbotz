@@ -111,6 +111,7 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
       router.get("/:id/edit", isLoggedIn, async (req, res) => {
         const editedSauceId = req.params.id
         const editedSauceInfo = await Sauce.findById(editedSauceId)
+        console.log(editedSauceInfo)
         res.render("sauces/edit", {user:req.session.user, editedSauceInfo})
     });
     
@@ -124,9 +125,6 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
       const updatedSauce = await Sauce.findByIdAndUpdate(editedSauceId, editedSauce, {new:true})
       console.log("updatedSauce", updatedSauce)
 
-      //const randomSauces = await Sauce.aggregate([ { $sample: { size: 5 } } ]).limit(5)
-
-      //res.render("sauces/details", {user:req.session.user, selectedSauce, randomSauces, update:true})
       res.redirect(`/sauces/${editedSauceId}`)
   });
   
