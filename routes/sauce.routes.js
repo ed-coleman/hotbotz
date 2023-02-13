@@ -70,7 +70,7 @@ router.get("/home", isLoggedIn, async (req, res) => {
 
   /*ADD MORE DETAILS TO HOT SAUCE ENTRY*/
   router.get("/add-details", isLoggedIn, (req, res) => {
-    res.render("sauces/add-details", {user:req.session.user})
+    res.redirect(`/sauces/add-details`)
 });
 
 router.post("/add-details", isLoggedIn, async (req, res) => {
@@ -84,12 +84,7 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
     
       const newSauce = req.body
       const addedSauce = await Sauce.create(newSauce)
-      const selectedSauce = addedSauce
-      console.log(selectedSauce)
-      const randomSauces = await Sauce.aggregate([ { $sample: { size: 5 } } ]).limit(5)
-      res.render("sauces/details", {user:req.session.user, selectedSauce, randomSauces})
-
-
+      res.redirect(`/sauces/${addedSauce._id}`)
 
   } catch (error) {
 
