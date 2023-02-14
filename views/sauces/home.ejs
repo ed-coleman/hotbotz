@@ -16,9 +16,11 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div id="sideMenuContent" class="offcanvas-body">
-    <a href="#recentSauce">Recently Added Sauces</a>
-    <a href="">Spicest Sauces</a>
-    <a href="">Best Rated Sauces</a>
+    Filter Sauces
+    <a href="#recentSauce">Recently Added</a>
+    <a href="#hottestSauce">Hottest</a>
+    <a href="#bestRatedSauce">Highest Rated</a>
+    <a href="#mostReviewedSauce">Most Reviewed</a>
   </div>
 </div>
   
@@ -99,7 +101,7 @@ let createdAtDateReformatted = day + "/" + month + "/" + year;
           <div id="sauceDisplay" class="col">
           
             <div id="headerWrapper">
-                        <h2>Hottest</h2>
+              <a id="hottestSauce"><h2>Hottest</h2></a>
                       </div>
             
                         <div style="display:flex;flex-wrap: wrap;">
@@ -135,7 +137,7 @@ let createdAtDateReformatted = day + "/" + month + "/" + year;
           <div id="sauceDisplay" class="col">
           
             <div id="headerWrapper">
-                        <h2>Highest rated</h2>
+              <a id="bestRatedSauce"><h2>Highest rated</h2></a>
                       </div>
             
                       <h3>Coming SOON</h3>
@@ -146,7 +148,7 @@ let createdAtDateReformatted = day + "/" + month + "/" + year;
           
           <div id="sauceDisplay" class="col">
           
-            <div id="headerWrapper">
+            <a id="mostReviewedSauce"><div id="headerWrapper"></a>
                         <h2>Most reviewed</h2>
                       </div>
             
