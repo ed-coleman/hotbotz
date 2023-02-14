@@ -80,7 +80,7 @@ router.post("/login", isLoggedOut, async (req, res) => {
       if(bcrypt.compareSync(req.body.password, currentUser.passwordHash)){
         //Password is correct
         req.session.user = currentUser
-        res.redirect('/auth/profile')
+        res.redirect('/sauces/home')
       }
       else{
         //Password is incorrect
