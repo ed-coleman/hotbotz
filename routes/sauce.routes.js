@@ -144,6 +144,46 @@ router.post("/:id/delete", isLoggedIn, async (req, res) => {
   const deleteSauce = await Sauce.deleteOne({_id: deletedSauceId})
   res.redirect('/sauces/home')
 });
+
+//add review for sauce
+
+router.get("/:id/addReview", isLoggedIn, async (req, res) => {
+  try {
+    //get sauce name and user name
+    const sauceId = req.params.id
+    const selectedSauce = await Sauce.findById(sauceId).populate("addedBy")
+    res.render("reviews/addReview", {user:req.session.user, selectedSauce})
+} catch (error) {
+  console.log("error message")
+}
+})
+
+router.post("/:id/addReview", isLoggedIn, async (req, res) => { 
+  const sauceId = req.params.id
+res.redirect(`/sauces/${sauceId}`)
+})
+
+router.post("/add-details", isLoggedIn, async (req, res) => {
+  try {
+
+    if(req.body.image == ""){
+      req.body.image = undefined
+    }
+
+      req.body.addedBy = req.session.user._id
+    
+      const newSauce = req.body
+      const addedSauce = await Sauce.create(newSauce)
+      res.redirect(`/sauces/${addedSauce._id}`)
+
+  } catch (error) {
+
+  
+    console.log(error)
+  }
+});
+
+
   
     
 module.exports = router;

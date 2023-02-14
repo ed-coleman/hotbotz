@@ -1,0 +1,32 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
+  </head>
+</head>
+
+<%= selectedSauce  %>
+<form id="addSauceDetailsForm" action="/addReview" method="POST">
+    
+    <label>Sauce Name:<input type="text" name="sauce" value="<%= selectedSauce.name %>" style="border:none" readonly/></label><br/>
+    <label>Spice Level:
+<select id="spiceRating" name="spiceLevel">
+  <option value="🌶️">🌶️</option>
+  <option value="🌶️🌶️">🌶️🌶️</option>
+  <option value="🌶️🌶️🌶️">🌶️🌶️🌶️</option>
+  <option value="🌶️🌶️🌶️🌶️">🌶️🌶️🌶️🌶️</option>
+  <option value="🌶️🌶️🌶️🌶️🌶️">🌶️🌶️🌶️🌶️🌶️</option>
+</select>
+</label>
+<label>Rating:
+    <select id="spiceRating" name="rating">
+      <option value="⭐️">⭐️</option>
+      <option value="⭐️⭐️">⭐️⭐️</option>
+      <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+      <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+      <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+    </select>
+    </label>
+    <label>Review: <textarea id="description" name="review" rows="4" cols="50" placeholder="Required"></textarea></label><br/>
+    <button id="submitLogin" type="submit">Leave Review</button>
+</form>

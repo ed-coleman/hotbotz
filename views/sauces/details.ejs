@@ -19,6 +19,7 @@
 <p><span class="bold">Added By: </span>
     <img src="<%= selectedSauce.addedBy.avatar %>" width="20"> <%= selectedSauce.addedBy.username %></p>
 <p><span class="bold"></span><a href="<%= selectedSauce.link %>" target="_blank">Buy This Sauce</a></p>
+<a href="<%= selectedSauce._id %>/addReview"><button>Leave a Review</button></a>
 
 
 <% if (user.username === selectedSauce.addedBy.username) { %>

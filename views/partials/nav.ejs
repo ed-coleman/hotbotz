@@ -1,22 +1,19 @@
 <nav id="navBar">
   <div id="navWrapper">
     <h1>HOT BOTZ</h1>
-    <% if (user) { %>
     <ul style="display:flex;gap:15px;list-style:none;">
         <li><a href="/sauces/home">Browse Sauces</a></li>
         <li><a href="/sauces/add">Add Sauce</a></li>
         <li><a href="/auth/profile">Profile</a></li>
         <li><a href="/auth/logout">Logout</a></li>
 
-<% if (!user) { %>
   <li><a href="/auth/signup">Signup</a></li>
   <li><a href="/auth/login">Login</a></li>
  
-<% } %>
+
 
         
     </ul>
-    <% } %>
+
   </div>
-  <div id="blackLine"></div>
   </nav>
