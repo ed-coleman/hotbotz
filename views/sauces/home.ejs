@@ -16,9 +16,11 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div id="sideMenuContent" class="offcanvas-body">
-    <a href="#recentSauce">Recently Added Sauces</a>
-    <a href="">Spicest Sauces</a>
-    <a href="">Best Rated Sauces</a>
+    Filter Sauces
+    <a href="#recentSauce">Recently Added</a>
+    <a href="#hottestSauce">Hottest</a>
+    <a href="#bestRatedSauce">Highest Rated</a>
+    <a href="#mostReviewedSauce">Most Reviewed</a>
   </div>
 </div>
   
@@ -72,12 +74,85 @@
                       .split(' ')
                       .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
                       .join(' ')%>
+                      <br/>
+
+<% 
+let createdAtDate = sauce.createdAt
+let createdAt = createdAtDate
+let day = createdAt.getDate()
+let month = createdAt.getMonth()+1 
+let year = createdAt.getYear()-100
+let createdAtDateReformatted = day + "/" + month + "/" + year;
+%>
+
+                      <span style="color:red;font-weight:bold"><%= createdAtDateReformatted %></span>
                     </h5>
                     </div>
                 </div>
 
                 <% }) %>
             </div>
+          </div>
+
+
+
+
+
+          <div id="sauceDisplay" class="col">
+          
+            <div id="headerWrapper">
+              <a id="hottestSauce"><h2>Hottest</h2></a>
+                      </div>
+            
+                        <div style="display:flex;flex-wrap: wrap;">
+                            <% hottestSauces.forEach(sauce => { %>
+            
+                            <div id="sauceCard" class="card" style="width: 10rem;margin:10px;">
+                              
+                              <a id="sauceImage" href="<%= sauce._id %>"><img id="sauceImage"  src="<%= sauce.image %>" class="card-img-top" alt="<%= sauce.name %>" width="30"></a>
+                                <div id="cardBody" class="card-body">
+                                <h5  class="card-title">
+                                  <% const sauceName = sauce.name%>
+                                  <%= sauceName.toLowerCase()
+                                  .split(' ')
+                                  .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+                                  .join(' ')%>
+                                  <br/>
+                                  <span style="color:red;font-weight:bold"><%= sauce.scoville %> SHU</span>
+                                  
+                                </h5>
+                   
+                                  
+                                </div>
+                            </div>
+            
+                            <% }) %>
+                        </div>
+          </div>
+
+
+
+
+
+          <div id="sauceDisplay" class="col">
+          
+            <div id="headerWrapper">
+              <a id="bestRatedSauce"><h2>Highest rated</h2></a>
+                      </div>
+            
+                      <h3>Coming SOON</h3>
+          </div>
+
+
+
+          
+          <div id="sauceDisplay" class="col">
+          
+            <a id="mostReviewedSauce"><div id="headerWrapper"></a>
+                        <h2>Most reviewed</h2>
+                      </div>
+            
+                      <h3>Coming SOON</h3>
           </div>
 
 
