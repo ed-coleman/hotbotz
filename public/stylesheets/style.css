@@ -50,8 +50,8 @@ a:active {
 }
 
 #homeLinks a {
-  font-family: logo;
-  font-size: 80px;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: 70px;
   color: black;
   text-decoration: none !important;
   margin: 70px;
@@ -167,22 +167,40 @@ label {
 #sauceDisplay {
   font-family: "Sofia Sans Condensed", sans-serif;
   margin-top: 100px;
-  border: #f94f04;
-  border-style: none;
-  border-width: 2px;
 }
+
 
 #cardBody {
   font-family: "Sofia Sans Condensed", sans-serif;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
 }
+
+#cardBodyHottest {
+  font-family: "Sofia Sans Condensed", sans-serif;
+  padding-top: 20px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#cardBodyHottest span {
+  font-size: 17px;
+}
+
+
+
 
 #sauceImage {
   margin-top: 15px;
   min-height: 240px;
   max-height: 240px;
+  margin-bottom: 10px;
 }
 
 #addContainer {
@@ -266,6 +284,72 @@ color: #f94f04
   border: #f94f04;
   border-style: none;
   border-width: 2px;
-
+  margin-left: 30px;
+  margin-top: 40px;
 }
+
+#detailSauceIMG {
+  margin-top: 120px;
+  margin-bottom: 30px;
+  max-height: 450px;
+  max-width: 300px;
+  margin-left: 70px;
+}
+
+#sauceInfo {
+
+  margin-left: 100px;
+  max-width: 90vw;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-weight: 500;
+  font-size: larger;
+  
+}
+
+#sauceInfo a{
+  padding: 5px;
+  color: #f94f04;
+  text-decoration: none;
+}
+
+  #sauceInfo a:hover {
+    text-decoration-line: underline !important;
+    text-decoration-thickness: 1.5px !important;
+  }
+  
+  #sauceInfo a:active {
+    color: #04912e !important;
+  }
+
+  #sauceTitle {
+    margin-bottom: 30px;
+    margin-left: -10px;
+  }
+
+  #footerText {
+    color: white;
+    text-decoration: none !important;
+  }
+
+  #socialText {
+    font-family: "Sofia Sans Condensed", sans-serif !important;
+    color: #f94f04;
+    margin-bottom: -10px;
+  }
+
+  #icons {
+    margin-bottom: -15px;
+    color: #f94f04;
+  }
+  
+  #footerContent {
+    color: #f94f04;
+    font-family: "Sofia Sans Condensed", sans-serif !important;
+    font-size: 20px;
+    text-decoration: none !important;
+  }
+  
+  #footerContent a {
+    text-decoration: none !important;
+  }
 
