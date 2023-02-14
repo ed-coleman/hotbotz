@@ -2,6 +2,7 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const User = require('../models/User.model');
 const { isLoggedIn, isLoggedOut } = require('../middleware/route-guard');
+const Sauce = require('../models/Sauce.model');
 const router = express.Router();
 //registered this router in app.js, /auth is in front of every route
 
@@ -102,9 +103,10 @@ router.post("/login", isLoggedOut, async (req, res) => {
 
 
 /* GET PROFILE PAEG */
-router.get("/profile", isLoggedIn, (req, res) => {
+router.get("/profile", isLoggedIn, async (req, res) => {
   //console.log("SESSION ==========>", req.session)
-  res.render("auth/profile", {user:req.session.user})
+const mySauces = await Sauce.find({addedBy:req.session.user._id})
+  res.render("auth/profile", {user:req.session.user, mySauces})
 });
 
 

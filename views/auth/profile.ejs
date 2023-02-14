@@ -13,3 +13,13 @@
     <button onclick="window.location.href='/auth/profile'">Your Profile</button>
     
 </div>
+<h2>Sauces added by me</h2>
+<% mySauces.forEach(sauce => { %>
+<div style="border: 1px solid black; margin:10px;padding:10px;">
+    <p><a href="/sauces/<%= sauce._id %>"><%= sauce.name %></a></br>
+    <span>By <%= sauce.manufacturer %></span></p>
+
+    <a href="/sauces/<%= sauce._id %>/edit"><button>Edit</button></a> 
+    <a href="/sauces/<%= sauce._id %>/delete"><button>Delete</button></a> 
+</div>
+<% }) %>
