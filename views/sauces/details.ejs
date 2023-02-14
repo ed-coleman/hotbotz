@@ -4,20 +4,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
 </head>
 
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
+  </head>
+
 <div id="sauceSidebar">
-    <img src="<%= selectedSauce.image %>" width="300">
+    <img id="detailSauceIMG" src="<%= selectedSauce.image %>" width="300">
 </div>
 
 <div id="sauceInfo">
-<h2><%= selectedSauce.name %></h2>
+<h2 id="sauceTitle"><%= selectedSauce.name %></h2>
 <p><span class="bold">Ingredients: </span><%= selectedSauce.ingredients %></p>
 <p><span class="bold">Peppers: </span><%= selectedSauce.peppers %></p>
 <p><span class="bold">Description: </span><%= selectedSauce.description %></p>
 <p><span class="bold">Scoville: </span><%= selectedSauce.scoville %></p>
-<p><span class="bold">Origin Country: </span><%= selectedSauce.originCountry %></p>
+<p><span class="bold">Origin Country: </span><%= selectedSauce.originCountry.toUpperCase() %></p>
 <p><span class="bold">Manufacturer: </span><%= selectedSauce.manufacturer %></p>
 <p><span class="bold">Added By: </span><%= selectedSauce.addedBy.username %></p>
-<p><span class="bold">Buy this sauce: </span><a href="<%= selectedSauce.link %>" target="_blank">Website</a></p>
+<p><span class="bold"></span><a href="<%= selectedSauce.link %>" target="_blank">Buy This Sauce</a></p>
 
 
 <% if (user.username === selectedSauce.addedBy.username) { %>
@@ -29,14 +35,14 @@
 </div>
 
 
-<hr>
+
 <h2>Reviews</h2>
 <h3>Review title - "OMG MUST TRY!"</h3>
 <p>by krystinawitt</p>
 <p><span class="bold">Rating:</span> 🌶️🌶️🌶️🌶️</p>
 <p><span class="bold">Spice Level: </span>🌶️🌶️🌶️</p>
 <p>Description goes here...This is hardcoded at the moment but we can replace this when we get to the reviews part</p>
-<hr>
+
 
 <h3>Review title - "Not that good!"</h3>
 <p>by edcoleman</p>
@@ -44,25 +50,26 @@
 <p><span class="bold">Spice Level: </span>🌶️🌶️</p>
 <p>Description goes here...This is hardcoded at the moment but we can replace this when we get to the reviews part</p>
 <hr>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
+  </head>
+</head>
+<h2 id="reviewsContainer">You might also like these...</h2>
 
-
-
-
-
-<h2>You might also like these...</h2>
-
-<div style="display:flex;flex-wrap: wrap;">
+<div id="sauceDisplay" style="display:flex;flex-wrap: wrap;">
     <% randomSauces.forEach(sauce => { %>
 
-    <div class="card" style="width: 10rem;margin:10px;">
-        <img src="<%= sauce.image %>" class="card-img-top" alt="<%= sauce.name %>" width="30">
-        <div class="card-body">
-        <h5 class="card-title">
+    <div id="cardBody" class="card" style="width: 10rem;margin:10px;">
+        <a href="<%= sauce._id %>"><img id="sauceImage" src="<%= sauce.image %>" class="card-img-top" alt="<%= sauce.name %>" width="30"></a>
+        <div id="cardBody" class="card-body">
+        <h5 id ="cardBody" class="card-title">
             <%=sauce.name%>
         </h5>
-        <a href="<%= sauce._id %>" class="btn btn-secondary">View Sauce</a>
         </div>
     </div>
 
     <% }) %>
+</div>
 </div>

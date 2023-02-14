@@ -9,8 +9,8 @@
 <div id="sideMenuButton">
 <input  type="image" src="/images/hamburger.png" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"></button>
 </div>
-<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-  <div class="offcanvas-header">
+<div  class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div id="sideMenu" class="offcanvas-header">
 
 
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -64,7 +64,7 @@
           <div style="display:flex;flex-wrap: wrap;"> 
                 <% mostRecentSauce.forEach(sauce => { %>
 
-              <div class="card" style="width: 10rem;margin:10px;">
+              <div id="cardBodyHottest" class="card" style="width: 10rem;margin:10px;">
                   
                   <a id="sauceImage" href="<%= sauce._id %>"><img id="sauceImage"  src="<%= sauce.image %>" class="card-img-top" alt="<%= sauce.name %>" width="30"></a>
                     <div id="cardBody" class="card-body">
@@ -84,8 +84,8 @@ let month = createdAt.getMonth()+1
 let year = createdAt.getYear()-100
 let createdAtDateReformatted = day + "/" + month + "/" + year;
 %>
-
-                      <span style="color:red;font-weight:bold"><%= createdAtDateReformatted %></span>
+                      <span id="sauceDate" style="color:red;font-weight:bold"><%= createdAtDateReformatted %></span>
+                    
                     </h5>
                     </div>
                 </div>
@@ -110,7 +110,7 @@ let createdAtDateReformatted = day + "/" + month + "/" + year;
                             <div id="sauceCard" class="card" style="width: 10rem;margin:10px;">
                               
                               <a id="sauceImage" href="<%= sauce._id %>"><img id="sauceImage"  src="<%= sauce.image %>" class="card-img-top" alt="<%= sauce.name %>" width="30"></a>
-                                <div id="cardBody" class="card-body">
+                                <div id="cardBodyHottest" class="card-body">
                                 <h5  class="card-title">
                                   <% const sauceName = sauce.name%>
                                   <%= sauceName.toLowerCase()
