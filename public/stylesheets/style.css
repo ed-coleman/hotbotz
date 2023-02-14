@@ -1,10 +1,10 @@
 @font-face {
   font-family: logo;
-  src: url('/fonts/SnackerComicPersonalUseOnly-g3Z5.ttf');
+  src: url("/fonts/SnackerComicPersonalUseOnly-g3Z5.ttf");
 }
 
 #navWrapper {
-  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-family: "Sofia Sans Condensed", sans-serif;
   height: 20px;
   max-width: 100%;
   display: flex;
@@ -12,7 +12,6 @@
   justify-content: flex-start;
   align-items: baseline;
   margin-top: 30px;
-
 }
 
 a:hover {
@@ -30,8 +29,6 @@ a:active {
   font-size: 25px;
   text-decoration: none;
 }
-
-
 
 #navBar h1 {
   font-family: logo;
@@ -65,12 +62,12 @@ a:active {
 }
 
 #homeLinks a:active {
-  transform: translateY(2px) ;
+  transform: translateY(2px);
   color: #f94f04 !important;
 }
 
 #errorMessage {
-  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-family: "Sofia Sans Condensed", sans-serif;
   font-size: 30px !important;
   margin-bottom: 30px !important;
 }
@@ -81,27 +78,24 @@ a:active {
   display: flex;
   flex-direction: column;
   margin: auto;
-  align-items: center; 
+  align-items: center;
 }
 
 #loginForm {
-  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-family: "Sofia Sans Condensed", sans-serif;
   font-size: 30px;
   width: 500px;
   height: 400px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: rgba(230, 230, 230, .25);
+  background: rgba(230, 230, 230, 0.25);
   padding: 50px;
   margin: auto;
   border: #04912e;
   border-width: 1px;
   border-style: solid;
 }
-
-
-
 
 #loginForm input {
   height: 30px;
@@ -110,11 +104,11 @@ a:active {
   font-size: large;
 }
 #loginForm label {
-  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-family: "Sofia Sans Condensed", sans-serif;
 }
 
 #submitLogin {
-  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-family: "Sofia Sans Condensed", sans-serif;
   font-size: 25px;
   color: black;
   width: 120px;
@@ -131,9 +125,9 @@ a:active {
 }
 
 #submitLogin:hover {
-  color:white;
+  color: white;
   background-color: #f94f04;
-  border-color: white
+  border-color: white;
 }
 
 #submitLogin:active {
@@ -148,7 +142,8 @@ a:active {
   width: 300px;
 }
 
-label, input {
+label,
+input {
   display: block;
 }
 
@@ -159,43 +154,36 @@ label {
 
 #welcomeWrapper {
   margin-top: 150px;
-  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-family: "Sofia Sans Condensed", sans-serif;
   font-size: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-
 #sauceDisplay {
-  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-family: "Sofia Sans Condensed", sans-serif;
   margin-top: 100px;
   border: #f94f04;
   border-style: none;
   border-width: 2px;
-  
-  
 }
 
 #cardBody {
+  font-family: "Sofia Sans Condensed", sans-serif;
   display: flex;
   align-items: center;
-  justify-content: flex-end
+  justify-content: flex-end;
 }
 
 #sauceImage {
   margin-top: 15px;
   min-height: 240px;
- max-height: 240px;
+  max-height: 240px;
 }
 
-
-
-
-
-
 #addContainer {
-  font-family: 'Sofia Sans Condensed', sans-serif;
+  font-family: "Sofia Sans Condensed", sans-serif;
   font-size: x-large;
   margin-top: 150px;
   border: #f94f04;
@@ -206,7 +194,6 @@ label {
 
 #addSauceSearchForm input {
   width: 655px;
-  
 }
 
 #addSauceSearchForm label {
@@ -219,32 +206,61 @@ label {
   margin-bottom: 50px;
 }
 
-
-
 #addSauceSearchForm button {
   margin-left: 180px;
   margin-top: 50px;
 }
 
 #addSauceDetailsForm {
-
-font-family: 'Sofia Sans Condensed', sans-serif;
-font-size: larger;
-width: 50px;
-height: 40px;
-flex-direction: column;
-background: rgba(230, 230, 230, .25);
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: larger;
+  width: 50px;
+  height: 40px;
+  flex-direction: column;
 }
 
 #addSauceDetailsForm input {
   width: 500px;
 }
 
-#addSauceFormContainer { 
+#addSauceFormContainer {
   margin-top: 160px;
   margin-left: 60px;
- 
+}
 
+#sideMenuButton div {
+  position: relative;
+  left: 1300px;
+  top: 30px;
+  width: 35px;
+  height: 5px;
+  background-color: #f94f04;
+  margin: 6px 0;
+}
+
+#sideMenuButton {
+  position: relative;
+  left: 1480px;
+  opacity: 0.8;
+  width: 35px;
+  height: 5px;
+  margin: 6px 0;
 }
 
 
+
+#sideMenuContent {
+  margin-top: 30px;
+  font-family: "Sofia Sans Condensed", sans-serif ;
+  font-size: x-large;
+  display: flex;
+  flex-direction: column;
+}
+
+#sideMenuContent a {
+  padding-top: 40px;
+  padding-left: 20px;
+font-size: 1.8em;
+text-decoration: none;
+color: #f94f04
+}

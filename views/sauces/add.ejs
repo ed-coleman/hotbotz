@@ -26,13 +26,12 @@
         <div style="display:flex;flex-wrap: wrap;">
             <% sauceMatch.forEach(sauce => { %>
 
-            <div class="card" style="width: 10rem;margin:10px;">
-                <img src="<%= sauce.image %>" class="card-img-top" alt="<%= sauce.name %>" width="30">
+            <div id="cardBody" class="card" style="width: 10rem;margin:10px;">
+                <a id="sauceImage" href="<%= sauce._id %>"><img id="sauceImage" src="<%= sauce.image %>" class="card-img-top" alt="<%= sauce.name %>" width="30"></a>
                 <div class="card-body">
                 <h5 class="card-title">
                     <%=sauce.name%>
                 </h5>
-                <a href="<%= sauce._id %>" class="btn btn-secondary">View Sauce</a>
                 </div>
             </div>
 

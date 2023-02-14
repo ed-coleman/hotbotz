@@ -1,8 +1,31 @@
+
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
 </head>
+
+
+<div id="sideMenuButton">
+<input  type="image" src="/images/hamburger.png" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"></button>
+</div>
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+
+
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div id="sideMenuContent" class="offcanvas-body">
+    <a href="#recentSauce">Recently Added Sauces</a>
+    <a href="">Spicest Sauces</a>
+    <a href="">Best Rated Sauces</a>
+  </div>
+</div>
+  
+
+
+
+
 
 <div class="container text-center">
 
@@ -33,13 +56,13 @@
       <div id="sauceDisplay" class="col">
           
 <div id="headerWrapper">
-            <h2>Recently added</h2>
+  <a id="recentSauce"> <h2>Recently added</h2></a>
           </div>
 
-            <div style="display:flex;flex-wrap: wrap;">
+          <div style="display:flex;flex-wrap: wrap;"> 
                 <% mostRecentSauce.forEach(sauce => { %>
 
-                <div id="sauceCard" class="card" style="width: 10rem;margin:10px;">
+              <div class="card" style="width: 10rem;margin:10px;">
                   
                   <a id="sauceImage" href="<%= sauce._id %>"><img id="sauceImage"  src="<%= sauce.image %>" class="card-img-top" alt="<%= sauce.name %>" width="30"></a>
                     <div id="cardBody" class="card-body">
