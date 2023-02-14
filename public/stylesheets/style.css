@@ -12,6 +12,7 @@
   justify-content: flex-start;
   align-items: baseline;
   margin-top: 30px;
+  margin-left: 70px;
 }
 
 a:hover {
@@ -69,7 +70,9 @@ a:active {
 #errorMessage {
   font-family: "Sofia Sans Condensed", sans-serif;
   font-size: 30px !important;
-  margin-bottom: 30px !important;
+  margin-bottom: 50px !important;
+  margin-left: 50px !important;
+  
 }
 
 #loginWindow {
@@ -225,17 +228,7 @@ label {
 
 #addSauceFormContainer {
   margin-top: 160px;
-  margin-left: 60px;
-}
-
-#sideMenuButton div {
-  position: relative;
-  left: 1300px;
-  top: 30px;
-  width: 35px;
-  height: 5px;
-  background-color: #f94f04;
-  margin: 6px 0;
+  margin-left: 90px;
 }
 
 #sideMenuButton {
@@ -247,8 +240,6 @@ label {
   margin: 6px 0;
 }
 
-
-
 #sideMenuContent {
   margin-top: 30px;
   font-family: "Sofia Sans Condensed", sans-serif ;
@@ -258,9 +249,23 @@ label {
 }
 
 #sideMenuContent a {
-  padding-top: 40px;
+  padding-top: 60px;
   padding-left: 20px;
-font-size: 1.8em;
+font-size: 1.5em;
 text-decoration: none;
 color: #f94f04
 }
+
+#headerWrapperAddSauceDetail {
+  font-family: "Sofia Sans Condensed", sans-serif ;
+  margin-bottom: 30px;
+}
+
+#reviewsContainer {
+  font-family: "Sofia Sans Condensed", sans-serif;
+  border: #f94f04;
+  border-style: none;
+  border-width: 2px;
+
+}
+
