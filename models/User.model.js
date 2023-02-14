@@ -20,6 +20,14 @@ const userSchema = new Schema(
       required: true, 
 /*       validate: [validateEmail, 'Please fill a valid email address'],
       match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'], */
+    }, 
+    bio: {
+      type: String, 
+      default:"I love hotsauce!"
+    }, 
+    avatar: {
+      type: String, 
+      default: "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
     }
   },
   {

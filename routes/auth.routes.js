@@ -111,10 +111,11 @@ router.post("/login", isLoggedOut, async (req, res) => {
 
 /* GET PROFILE PAEG */
 router.get("/profile", isLoggedIn, async (req, res) => {
-  //console.log("SESSION ==========>", req.session)
 const mySauces = await Sauce.find({addedBy:req.session.user._id})
 const updatedMySauces = JSON.parse(JSON.stringify(mySauces))
-console.log("updatedMySauces:", updatedMySauces)
+//had to add this because user is giving me errors
+const userProfile = await User.find({_id:req.session.user._id})
+const myUser = userProfile[0]
 
 //add formatted sauce date
 updatedMySauces.map(sauce =>{
@@ -127,9 +128,23 @@ updatedMySauces.map(sauce =>{
 const userDate = new Date (req.session.user.createdAt)
 req.session.user.createdAt = changeDateFormat(userDate)
 
-  res.render("auth/profile", {user:req.session.user, updatedMySauces})
+  res.render("auth/profile", {user:req.session.user, updatedMySauces, myUser})
 });
 
+/* GET EDIT PROFILE */
+router.get("/profile/edit", isLoggedIn, async (req, res) => {
+  console.log("SESSION ==========>", req.session)
+  const userProfile = await User.find({_id:req.session.user._id})
+  console.log(userProfile[0])
+    res.render("auth/profile-edit", {user:req.session.user, userProfile})
+});
+
+router.post("/profile/edit", isLoggedIn, async (req, res) => {
+   console.log("SESSION ==========>", req.session)
+  const updatedProfile = req.body
+  await User.findOneAndUpdate({_id:req.session.user._id}, updatedProfile, {new:true})
+    res.redirect('/auth/profile')
+});
 
 
 

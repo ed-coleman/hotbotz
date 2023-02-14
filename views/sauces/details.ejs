@@ -4,12 +4,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
 </head>
 
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
-  </head>
-
 <div id="sauceSidebar">
     <img id="detailSauceIMG" src="<%= selectedSauce.image %>" width="300">
 </div>
@@ -22,7 +16,8 @@
 <p><span class="bold">Scoville: </span><%= selectedSauce.scoville %></p>
 <p><span class="bold">Origin Country: </span><%= selectedSauce.originCountry.toUpperCase() %></p>
 <p><span class="bold">Manufacturer: </span><%= selectedSauce.manufacturer %></p>
-<p><span class="bold">Added By: </span><%= selectedSauce.addedBy.username %></p>
+<p><span class="bold">Added By: </span>
+    <img src="<%= selectedSauce.addedBy.avatar %>" width="20"> <%= selectedSauce.addedBy.username %></p>
 <p><span class="bold"></span><a href="<%= selectedSauce.link %>" target="_blank">Buy This Sauce</a></p>
 
 
