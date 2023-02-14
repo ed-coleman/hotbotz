@@ -7,6 +7,13 @@ const router = express.Router();
 //registered this router in app.js, /auth is in front of every route
 
 
+function changeDateFormat(dateStamp){
+  let day = dateStamp.getDate()
+  let month = dateStamp.getMonth()+1 
+  let year = dateStamp.getYear()-100
+  return dateReformatted = day + "/" + month + "/" + year;
+}
+
 /* GET sign up page */
 router.get("/signup", isLoggedOut, (req, res) => {
   //console.log("SESSION ==========>", req.session)
@@ -106,7 +113,21 @@ router.post("/login", isLoggedOut, async (req, res) => {
 router.get("/profile", isLoggedIn, async (req, res) => {
   //console.log("SESSION ==========>", req.session)
 const mySauces = await Sauce.find({addedBy:req.session.user._id})
-  res.render("auth/profile", {user:req.session.user, mySauces})
+const updatedMySauces = JSON.parse(JSON.stringify(mySauces))
+console.log("updatedMySauces:", updatedMySauces)
+
+//add formatted sauce date
+updatedMySauces.map(sauce =>{
+  sauce.createdAt = new Date (sauce.createdAt)
+  sauce["created"] = changeDateFormat(sauce.createdAt)
+  return sauce
+})
+
+//add formatted user date
+const userDate = new Date (req.session.user.createdAt)
+req.session.user.createdAt = changeDateFormat(userDate)
+
+  res.render("auth/profile", {user:req.session.user, updatedMySauces})
 });
 
 
