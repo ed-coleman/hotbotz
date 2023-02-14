@@ -15,7 +15,7 @@ const usersArr = [{
   "passwordHash": "$2a$10$JHx8BHbyo6PilzbiHDXSFuvNO.mhaOrz7IFzKJgm.Lh6yCowmJV5a",
   "createdAt": "2023-02-10T12:56:51.056+00:00",
   "updatedAt": "2023-02-10T12:56:51.056+00:00",
-  "avatar":"https://ibb.co/nLPbt4n", 
+  "avatar":"https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg", 
   "bio":undefined
 }, 
 {
@@ -24,7 +24,7 @@ const usersArr = [{
   "passwordHash": "$2a$10$X430fDBqpoX9RUwCM4hwQ.aeQojrUt5WQeiU8Vh3X.61qcLct.iA2",
   "createdAt": "2023-02-10T13:29:37.904+00:00",
   "updatedAt": "2023-02-10T13:29:37.904+00:00",
-  "avatar":"https://iili.io/HEDEjR9.md.jpg", 
+  "avatar":"https://iili.io/HEDVNDX.jpg", 
   "bio":"Hi, I'm Ed! I cut hair and I love hot sauces!"
 }]
 
