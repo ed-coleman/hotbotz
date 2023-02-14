@@ -33,7 +33,8 @@ router.post("/signup", isLoggedOut, async (req, res) => {
 
   delete credentials.password
   credentials.passwordHash = passwordHash
-
+  credentials.avatar = undefined
+  credentials.bio = undefined
 
   try {
     await User.create(credentials)

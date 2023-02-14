@@ -16,7 +16,7 @@ const usersArr = [{
   "createdAt": "2023-02-10T12:56:51.056+00:00",
   "updatedAt": "2023-02-10T12:56:51.056+00:00",
   "avatar":"https://ibb.co/nLPbt4n", 
-  "bio":"Hi, I'm Ed! I cut hair and I love hot sauces!"
+  "bio":undefined
 }, 
 {
   "_id": "63e646c12be5d8dd17742fc3",
@@ -24,8 +24,8 @@ const usersArr = [{
   "passwordHash": "$2a$10$X430fDBqpoX9RUwCM4hwQ.aeQojrUt5WQeiU8Vh3X.61qcLct.iA2",
   "createdAt": "2023-02-10T13:29:37.904+00:00",
   "updatedAt": "2023-02-10T13:29:37.904+00:00",
-  "avatar":"https://ibb.co/nLPbt4n", 
-  "bio":undefined
+  "avatar":"https://iili.io/HEDEjR9.md.jpg", 
+  "bio":"Hi, I'm Ed! I cut hair and I love hot sauces!"
 }]
 
 mongoose
