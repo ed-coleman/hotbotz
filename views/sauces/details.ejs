@@ -30,28 +30,19 @@
 
 </div>
 
-
-
 <h2>Reviews</h2>
-<h3>Review title - "OMG MUST TRY!"</h3>
-<p>by krystinawitt</p>
-<p><span class="bold">Rating:</span> 🌶️🌶️🌶️🌶️</p>
-<p><span class="bold">Spice Level: </span>🌶️🌶️🌶️</p>
-<p>Description goes here...This is hardcoded at the moment but we can replace this when we get to the reviews part</p>
+<% sauceReviews.forEach(review => { %>
+<p><span class="bold">Reviewed By:</span> <%= review.addedBy.username %></p>
+<p><span class="bold">Rating:</span> <%= review.rating %></p>
+<p><span class="bold">Spice Level: </span> <%= review.spiceLevel %></p>
+<p><%= review.review %></p>
+ 
+<% }) %>
 
 
-<h3>Review title - "Not that good!"</h3>
-<p>by edcoleman</p>
-<p><span class="bold">Rating:</span> 🌶️🌶️</p>
-<p><span class="bold">Spice Level: </span>🌶️🌶️</p>
-<p>Description goes here...This is hardcoded at the moment but we can replace this when we get to the reviews part</p>
+
 <hr>
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
-  </head>
-</head>
+
 <h2 id="reviewsContainer">You might also like these...</h2>
 
 <div id="sauceDisplay" style="display:flex;flex-wrap: wrap;">

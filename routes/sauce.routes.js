@@ -104,9 +104,9 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
         const selectedSauce = await Sauce.findById(sauceId).populate("addedBy")
         //get 5 random sauces
         const randomSauces = await Sauce.aggregate([ { $sample: { size: 5 } } ]).limit(5)
-        //const sauceReviews = await Review.find( { sauce: sauceId } )
-        //console.log(sauceReviews)
-        res.render("sauces/details", {user:req.session.user, selectedSauce, randomSauces})
+        const sauceReviews = await Review.find( { sauce: sauceId } ).populate("addedBy")
+        console.log(sauceReviews)
+        res.render("sauces/details", {user:req.session.user, selectedSauce, randomSauces, sauceReviews})
       } catch (error) {
         console.log("Sauce details page failed to render", error)
       }
@@ -168,8 +168,8 @@ router.post("/:id/addReview", isLoggedIn, async (req, res) => {
   req.body.sauce = sauceId
   const reviewToAdd = req.body
   const newReview = await Review.create(reviewToAdd)
-  console.log(reviewToAdd)
-  console.log(newReview)
+  //console.log(reviewToAdd)
+  //console.log(newReview)
 res.redirect(`/sauces/${sauceId}`)
 })
 
