@@ -106,7 +106,6 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
       res.redirect(`/sauces/${addedSauce._id}`)
       
     } catch (error) {
-    console.log("=========1==========>", req.body.manufacturer)
     console.log("error on add-details page:", error)
     
     //validation blank name entered
