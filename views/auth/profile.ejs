@@ -12,12 +12,26 @@
     <% } %>
     Hello <%= myUser.username %>!</h2>
 
-<p><b>Lost in the sauce since:</b> <%= user.createdAt %>
+<p><b>Lost in the sauce since:</b> <%= user.createdAt %></p>
+<p><b>Level: </b>
+
+<% if (updatedMySauces.length === 0) { %>
+Beginner
+<% } else if (updatedMySauces.length > 500) { %>
+Spice Lord
+<% } else if (updatedMySauces.length > 10) { %>
+Advanced
+<% } else if (updatedMySauces.length > 5) { %>
+Intermediate
+<% } %>
+ 
+    
+</p>
 <p><b>Sauces added:</b> <%= updatedMySauces.length %></p>
 <p><b>Bio:</b> <%= myUser.bio %></p>
 
 
-</p>
+
 
 <div>
     <button onclick="window.location.href='/sauces'">See what&apos;s new</button>
