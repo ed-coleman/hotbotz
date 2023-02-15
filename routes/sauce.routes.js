@@ -110,16 +110,15 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
     console.log("error on add-details page:", error)
     
     //validation blank name entered
-    if(req.body.manufacturer == ""){
+    if(req.body.manufacturer == "" || req.body.ingredients == "" || req.body.peppers == "" || req.body.description == "" || req.body.image == ""){
       
-      console.log("=========2==========>")
       res.render('sauces/add-details', {
         errorMessage: error,
         errorCode: undefined,
         user:req.session.user,
         addedSauce:req.body.name
       })
-            }
+    }
   }
 });
 
