@@ -82,7 +82,7 @@ Tabasco Titan <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png"
                 <p>Spice: <%= review.spiceLevel %></br>
                 <p>Rating: <%= review.rating %></br>
                 <p>Review: <%= review.review %></br>
-            <div><a href="/sauces/"><button id="viewReviewButton">View review</button></a></div> 
+            <div><a href="/sauces/<%= review.sauce._id %>"><button id="viewReviewButton">View review</button></a></div> 
         </div>
         </div>
         <% }) %>
