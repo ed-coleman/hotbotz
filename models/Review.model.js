@@ -21,7 +21,7 @@ const reviewSchema = new Schema(
         },
         review: {
             type: String,
-            maxLength: 200,
+            maxLength: 400,
         },
         addedBy: {
             type: Schema.Types.ObjectId,
