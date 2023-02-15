@@ -3,15 +3,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
 </head>
+<div id="profileEditInfo">
+    <div id="headerWrapperAddSauceDetail">
 <h1>Edit profile</h1>
+</div>
 
-<h2><img src="<%= userProfile[0].avatar %>" width="30" style="margin-right:30px;">Hello <%= userProfile[0].username %>!</h2>
+<h2 id="profileHeader"><img id="profileImage" src="<%= userProfile[0].avatar %>" width="30" style="margin-right:30px;">Hello <%= userProfile[0].username %>!</h2>
 <form method="post" action="/auth/profile/edit">
-<label>Username: <input type="text" name="username" value="<%= userProfile[0].username %>" style="border:none;" readonly/></label><br/>
+<label>Username: <input id="usernameEditProfile" type="text" name="username" value="<%= userProfile[0].username %>" style="border:none;" readonly/></label><br/>
 <label>Profile pic: <input type="text" name="avatar" value="<%= userProfile[0].avatar %>"/></label><br/>
-<label>Bio: <br/><textarea name="bio" rows="3" cols="40"><%= userProfile[0].bio %></textarea>
+<label>Bio: <br/><textarea id="description" name="bio" rows="3" cols="40"><%= userProfile[0].bio %></textarea>
 </label><br/>
 
 
-<button type="submit">Save Profile</button>
+<button id="profileEditButton" type="submit">Save Profile</button>
 </form>
+</div>
