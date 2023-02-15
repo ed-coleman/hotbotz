@@ -94,7 +94,7 @@ router.get("/all", isLoggedIn, async (req, res) => {
 
 router.post("/add-details", isLoggedIn, async (req, res) => {
   try {
-
+  
     if(req.body.image == ""){
       req.body.image = undefined
     }
@@ -104,11 +104,22 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
       const newSauce = req.body
       const addedSauce = await Sauce.create(newSauce)
       res.redirect(`/sauces/${addedSauce._id}`)
-
-  } catch (error) {
-
-  
-    console.log(error)
+      
+    } catch (error) {
+    console.log("=========1==========>", req.body.manufacturer)
+    console.log("error on add-details page:", error)
+    
+    //validation blank name entered
+    if(req.body.manufacturer == ""){
+      
+      console.log("=========2==========>")
+      res.render('sauces/add-details', {
+        errorMessage: error,
+        errorCode: undefined,
+        user:req.session.user,
+        addedSauce:req.body.name
+      })
+            }
   }
 });
 
