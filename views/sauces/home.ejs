@@ -139,20 +139,34 @@ let createdAtDateReformatted = day + "/" + month + "/" + year;
             <div id="headerWrapper">
               <a id="bestRatedSauce"><h2>Highest rated</h2></a>
                       </div>
+
+                      <div style="display:flex;flex-wrap: wrap;">
+                      <% topReviews.forEach(review => { %>
             
-                      <h3>Coming SOON</h3>
+                        <div id="sauceCard" class="card" style="width: 10rem;margin:10px;">
+                          
+                          <a id="sauceImage" href="<%= review.sauce._id %>"><img id="sauceImage"  src="<%= review.sauce.image %>" class="card-img-top" alt="<%= review.sauce.name %>" width="30"></a>
+                            <div id="cardBodyHottest" class="card-body">
+                            <h5  class="card-title">
+
+                              <%= review.sauce.name%>
+
+                                 
+                              <span style="color:red;font-weight:bold"><%= review.rating %></span>
+                              
+                            </h5>
+               
+                              
+                            </div>
+                        </div>
+        
+                        <% }) %>
+                      </div>
           </div>
 
 
 
-          
-          <div id="sauceDisplay" class="col">
-          
-            <a id="mostReviewedSauce"><div id="headerWrapper"></a>
-                        <h2>Most reviewed</h2>
-                      </div>
-            
-                      <h3>Coming SOON</h3>
+
           </div>
 
 

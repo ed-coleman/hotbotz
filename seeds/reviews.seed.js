@@ -12,7 +12,7 @@ const MONGO_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/sauceCod
 const reviewsArr = [{
   "addedBy": "63e63f130c6136cbc2ff5e88", "sauce": "63eb9567ddbe6bde86867ab7",
   "spiceLevel": "🌶️🌶️🌶️",
-  "rating": "⭐️⭐️",
+  "rating": "⭐️⭐️⭐️⭐️⭐️",
   "review": "Fucking amazing sauce!", 
   "createdAt": "2023-02-15T11:34:41.083+00:00",
   "updatedAt": "2023-02-15T11:34:41.083+00:00",
@@ -21,7 +21,7 @@ const reviewsArr = [{
   
   "addedBy": "63e63f130c6136cbc2ff5e88", "sauce": "63eb9567ddbe6bde86867ab8",
   "spiceLevel": "🌶️🌶️🌶️🌶️",
-  "rating": "⭐️⭐️",
+  "rating": "⭐️⭐️⭐️⭐️⭐️",
   "review": "One word: delicious. That’s it. It tastes so good. The perfect balance and depth of flavor, with a hint of sweet. It has just the right amount of heat that won’t overwhelm your meal. AND! It caused no gastrointestinal chaos. (See Last Dab review lol.)", 
   "createdAt": "2023-02-15T11:34:41.083+00:00",
   "updatedAt": "2023-02-15T11:34:41.083+00:00",
@@ -30,7 +30,7 @@ const reviewsArr = [{
   
   "addedBy": "63e63f130c6136cbc2ff5e88", "sauce": "63eb9567ddbe6bde86867ab0",
   "spiceLevel": "🌶️🌶️🌶️🌶️",
-  "rating": "⭐️⭐️",
+  "rating": "⭐️⭐️⭐️⭐️⭐️",
   "review": "One word: delicious. That’s it. It tastes so good. The perfect balance and depth of flavor, with a hint of sweet. It has just the right amount of heat that won’t overwhelm your meal. AND! It caused no gastrointestinal chaos. (See Last Dab review lol.)", 
   "createdAt": "2023-02-15T11:34:41.083+00:00",
   "updatedAt": "2023-02-15T11:34:41.083+00:00",
@@ -39,7 +39,7 @@ const reviewsArr = [{
   
   "addedBy": "63e63f130c6136cbc2ff5e88", "sauce": "63eb9567ddbe6bde86867aaf",
   "spiceLevel": "🌶️🌶️🌶️🌶️",
-  "rating": "⭐️⭐️",
+  "rating": "⭐️⭐️⭐️⭐️⭐️",
   "review": "This sauce is absolutely delicious as a condiment! We tried it and went through it in a few days. Immediately ordered the 3 pack and I fell in love with the Barbacoa as well. ", 
   "createdAt": "2023-02-15T11:34:41.083+00:00",
   "updatedAt": "2023-02-15T11:34:41.083+00:00",
@@ -48,7 +48,7 @@ const reviewsArr = [{
   
   "addedBy": "63e63f130c6136cbc2ff5e88", "sauce": "63eb9567ddbe6bde86867ab6",
   "spiceLevel": "🌶️🌶️",
-  "rating": "⭐️⭐️",
+  "rating": "⭐️⭐️⭐️⭐️⭐️",
   "review": "Introduced my GF to the hot ones lineup, and this was both of our favorites! We had a table setup and a full interview of little things we didn’t know about each other! Great date night idea. Things got spicy! Haha! I put this sauce on anything. Best hot sauce I’ve ever had honestly.", 
   "createdAt": "2023-02-15T11:34:41.083+00:00",
   "updatedAt": "2023-02-15T11:34:41.083+00:00",
@@ -57,7 +57,7 @@ const reviewsArr = [{
   
   "addedBy": "63e63f130c6136cbc2ff5e88", "sauce": "63eb9567ddbe6bde86867abc",
   "spiceLevel": "🌶️🌶️🌶️",
-  "rating": "⭐️⭐️",
+  "rating": "⭐️⭐️⭐️⭐️⭐️",
   "review": "This THEE BEST hot sauce ever! I put it on my wings, breakfast burritos, and pizza. I wish there were bigger bottles of this one cause I go through a lot.", 
   "createdAt": "2023-02-15T11:34:41.083+00:00",
   "updatedAt": "2023-02-15T11:34:41.083+00:00",
@@ -66,7 +66,7 @@ const reviewsArr = [{
   
   "addedBy": "63e63f130c6136cbc2ff5e88", "sauce": "63eb9567ddbe6bde86867abd",
   "spiceLevel": "🌶️🌶️🌶️🌶️",
-  "rating": "⭐️⭐️",
+  "rating": "⭐️⭐️⭐️⭐️⭐️",
   "review": "This sauce is amazing 🤩!!! Soo delicious , not too spicy with a subtle sweetness. Perfect literally on anything wings, tacos, u name it it’s really versatile. I recently did my own hot ones challenge and this was by far my favorite sauce as far as flavors is concerned I will definitely be buying again 🤤", 
   "createdAt": "2023-02-15T11:34:41.083+00:00",
   "updatedAt": "2023-02-15T11:34:41.083+00:00",

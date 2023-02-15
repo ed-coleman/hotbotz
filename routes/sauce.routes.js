@@ -15,8 +15,16 @@ router.get("/home", isLoggedIn, async (req, res) => {
         const topSauces = await Sauce.aggregate([ { $sample: { size: 14 } } ]).limit(14)
         const mostRecentSauce = await Sauce.find().sort( { "createdAt": -1 } ).limit(7)
         const hottestSauces = await Sauce.find().sort( { "scoville": -1 } ).limit(7)
-        //console.log("mostRecentSauce: ", mostRecentSauce)
-        res.render("sauces/home", {user:req.session.user, topSauces, mostRecentSauce, hottestSauces})
+        const topReviews = await Review.find({
+          rating: {
+            $in: [
+              "⭐️⭐️⭐️⭐️⭐️"
+            ]
+          }
+        }).limit(7).populate("sauce")
+        
+ 
+        res.render("sauces/home", {user:req.session.user, topSauces, mostRecentSauce, hottestSauces, topReviews})
     } catch (error) {
         console.log("Home page could not display")
     }
