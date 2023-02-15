@@ -277,6 +277,7 @@ color: #f94f04
 #headerWrapperAddSauceDetail {
   font-family: "Sofia Sans Condensed", sans-serif ;
   margin-bottom: 30px;
+  color: #f94f04;
 }
 
 #reviewsContainer {
@@ -284,7 +285,7 @@ color: #f94f04
   border: #f94f04;
   border-style: none;
   border-width: 2px;
-  margin-left: 30px;
+  margin-left: 50px;
   margin-top: 40px;
 }
 
@@ -297,7 +298,7 @@ color: #f94f04
 }
 
 #sauceInfo {
-
+padding: 5px;
   margin-left: 100px;
   max-width: 90vw;
   font-family: "Sofia Sans Condensed", sans-serif;
@@ -305,6 +306,7 @@ color: #f94f04
   font-size: larger;
   
 }
+
 
 #sauceInfo a{
   padding: 5px;
@@ -320,6 +322,7 @@ color: #f94f04
   #sauceInfo a:active {
     color: #04912e !important;
   }
+
 
   #sauceTitle {
     margin-bottom: 30px;
@@ -352,4 +355,97 @@ color: #f94f04
   #footerContent a {
     text-decoration: none !important;
   }
+
+  #addReviewForm {
+    width: 500px;
+    margin-left: 50px;
+    margin-top: 200px;
+    margin-bottom: 1000px;
+    font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: larger;
+  width: 50px;
+  height: 40px;
+  flex-direction: column;
+  
+  }
+  #sauceNameWrapper {
+    font-size: 25px;
+  }
+
+  #sauceNameWrapper span {
+    font-size: 35px;
+    
+  }
+  #sauceNameWrapper input {
+    color: #f94f04;
+  }
+
+  #description {
+    width: 600px;
+  }
+
+  #description :focus, textarea:focus {
+    border: 2px solid #04912e !important;
+    box-shadow: 0 0 1px #04912e !important;
+    -moz-box-shadow: 0 0 1px #04912e !important;
+    -webkit-box-shadow: 0 0 1px #04912e !important;
+    outline: none !important;
+    }
+
+    #submitReviewButton {
+        font-family: "Sofia Sans Condensed", sans-serif;
+        font-size: 25px;
+        color: black;
+        width: 150px;
+        border: solid;
+        padding: 10px;
+        border-radius: 6px;
+        border-color: black;
+        border-width: 2px;
+        margin-left: 20px;
+        margin-bottom: 50px;
+        margin-top: 20px;
+        box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.15);
+        text-decoration: none !important;
+      }
+      
+      #submitReviewButton:hover {
+        color: white;
+        background-color: #f94f04;
+        border-color: white;
+      }
+      
+      #submitReviewButton:active {
+        transform: translateY(2.5px);
+      }
+
+#reviewsHeader {
+
+  margin-bottom: 30px;
+  
+
+}
+
+#sauceDisplayDetails {
+  
+    font-family: "Sofia Sans Condensed", sans-serif;
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+
+  #profileContainer {
+    margin-top: 100px;
+  }
+
+  #buffer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+
+
+    
+    
+   
+
 

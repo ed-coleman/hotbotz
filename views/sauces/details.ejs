@@ -19,7 +19,7 @@
 <p><span class="bold">Added By: </span>
     <img src="<%= selectedSauce.addedBy.avatar %>" width="20"> <%= selectedSauce.addedBy.username %></p>
 <p><span class="bold"></span><a href="<%= selectedSauce.link %>" target="_blank">Buy This Sauce</a></p>
-<a href="<%= selectedSauce._id %>/addReview"><button>Leave a Review</button></a>
+<a href="<%= selectedSauce._id %>/addReview"><button id="submitReviewButton">Leave a Review</button></a>
 
 
 <% if (user.username === selectedSauce.addedBy.username) { %>
@@ -27,10 +27,12 @@
     <a href="/sauces/<%= selectedSauce._id %>/delete"><button>DELETE SAUCE</button></a> 
 <% } %>
 
+<hr>
+
 
 </div>
-
-<h2>Reviews</h2>
+<div id="sauceInfo">
+<h2 id="reviewsHeader">Reviews</h2>
 <% sauceReviews.forEach(review => { %>
 <p><span class="bold">Reviewed By:</span> <%= review.addedBy.username %></p>
 <p><span class="bold">Rating:</span> <%= review.rating %></p>
@@ -42,10 +44,11 @@
 
 
 <hr>
+</div>
 
 <h2 id="reviewsContainer">You might also like these...</h2>
 
-<div id="sauceDisplay" style="display:flex;flex-wrap: wrap;">
+<div id="sauceDisplayDetails" style="display:flex;flex-wrap: wrap;">
     <% randomSauces.forEach(sauce => { %>
 
     <div id="cardBody" class="card" style="width: 10rem;margin:10px;">

@@ -4,14 +4,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
   </head>
 </head>
-
-
-<form id="addSauceDetailsForm" action="/sauces/<%= selectedSauce._id %>/addReview" method="POST">
-    
-    <label>Sauce Name:<input type="text" name="" value="<%= selectedSauce.name %>" style="border:none" readonly/></label><br/>
+<body>
+  
+<div id="addSauceFormContainer">
+<form id="addReviewForm" action="/sauces/<%= selectedSauce._id %>/addReview" method="POST">
+    <div id="sauceNameWrapper">
+    <label><span>Sauce Name: </span><input type="text" name="" value="<%= selectedSauce.name %>" style="border:none" readonly/></label>
+  </div>
     <label>Spice Level:
-<select id="spiceRating" name="spiceLevel">
-  <option value="🌶️">🌶️</option>
+<select id="spiceRating" name="spiceLevel" placeholder="Pick a Value">
+  <option value="🌶️" >🌶️</option>
   <option value="🌶️🌶️">🌶️🌶️</option>
   <option value="🌶️🌶️🌶️">🌶️🌶️🌶️</option>
   <option value="🌶️🌶️🌶️🌶️">🌶️🌶️🌶️🌶️</option>
@@ -28,5 +30,8 @@
     </select>
     </label>
     <label>Review: <textarea id="description" name="review" rows="4" cols="50" placeholder="Required"></textarea></label><br/>
-    <button id="submitLogin" type="submit">Leave Review</button>
+    <button id="submitReviewButton" type="submit">Leave Review</button>
 </form>
+
+</body>
+</div>

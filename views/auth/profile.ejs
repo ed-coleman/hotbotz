@@ -4,8 +4,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
 </head>
 
-
-    
+<div id="profileContainer">
+  <div id="sauceInfo">
 <h2>
     <% if (myUser.avatar) { %>
         <img src="<%= myUser.avatar %>" width="30" style="margin-right:30px;">
@@ -27,6 +27,8 @@ Advanced <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png" widt
  
     
 </p>
+</div>
+<div id="sauceInfo">
 <p><b>Sauces added:</b> <%= updatedMySauces.length %></p>
 <p><b>Bio:</b> <%= myUser.bio %></p>
 
@@ -38,6 +40,10 @@ Advanced <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png" widt
     <button onclick="window.location.href='/auth/profile/edit'">Edit Your Profile</button>
     
 </div>
+</div>
+<hr>
+<div id="buffer"></div>
+<div id="sauceInfo">
 <h2>Sauces added by me</h2>
 <% if (updatedMySauces.length !== 0) { %>
     <% updatedMySauces.forEach(sauce => { %>
@@ -55,7 +61,10 @@ Advanced <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png" widt
 <% } else { %>
 <p>No sauces added yet. <a href="/sauces/add">Add your first sauce</a></p>
 <% } %>
-
+</div>
+<div id="buffer"></div>
+<div id="sauceInfo">
+    <hr>
 <h2>Reviews added by me</h2>
 <% if (myReviews.length !== 0) { %>
     <% myReviews.forEach(review => { %>
@@ -72,3 +81,5 @@ Advanced <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png" widt
 <% } else { %>
 <p>No reviews added yet</p>
 <% } %>
+</div>
+</div>
