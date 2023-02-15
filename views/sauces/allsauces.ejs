@@ -1,0 +1,37 @@
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
+  </head>
+  
+  
+  <div class="container text-center">
+        <div id="sauceDisplay" class="col">
+            
+
+            <div style="display:flex;flex-wrap: wrap;"> 
+                  <% allSauces.forEach(sauce => { %>
+  
+                <div id="cardBodyHottest" class="card" style="width: 10rem;margin:10px;">
+                    
+                    <a id="sauceImage" href="<%= sauce._id %>"><img id="sauceImage"  src="<%= sauce.image %>" class="card-img-top" alt="<%= sauce.name %>" width="30"></a>
+                      <div id="cardBody" class="card-body">
+                      <h5  class="card-title">
+                        <% const sauceName = sauce.name%>
+                        <%= sauceName.toLowerCase()
+                        .split(' ')
+                        .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
+                        .join(' ')%>
+                        <br/>
+               
+                      </h5>
+                      </div>
+                  </div>
+  
+                  <% }) %>
+              </div>
+        </div>
+  
+  </div>
+  

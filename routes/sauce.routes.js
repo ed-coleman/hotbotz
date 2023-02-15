@@ -21,6 +21,15 @@ router.get("/home", isLoggedIn, async (req, res) => {
         console.log("Home page could not display")
     }
   });
+
+router.get("/all", isLoggedIn, async (req, res) => {
+  try {
+      const allSauces = await Sauce.find()
+      res.render("sauces/allsauces.ejs", {user:req.session.user, allSauces})
+  } catch (error) {
+      console.log("All sauces page could not display")
+  }
+});
   
   
   /* GET ADD SAUCE */
