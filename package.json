@@ -7,7 +7,8 @@
     "dev": "nodemon server.js", 
     "seed-sauces": "node seeds/sauces.seed.js",
     "seed-users": "node seeds/users.seed.js",
-    "seed-reviews": "node seeds/reviews.seed.js"
+    "seed-reviews": "node seeds/reviews.seed.js",
+    "seed": "node seeds/reviews.seed.js && node seeds/users.seed.js && node seeds/sauces.seed.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
