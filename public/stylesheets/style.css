@@ -280,7 +280,7 @@ color: #f94f04
   color: #f94f04;
 }
 
-#reviewsContainer {
+#reviewsHeader {
   font-family: "Sofia Sans Condensed", sans-serif;
   border: #f94f04;
   border-style: none;
@@ -431,6 +431,14 @@ padding: 5px;
     font-family: "Sofia Sans Condensed", sans-serif;
     margin-top: 20px;
     margin-left: 40px;
+   
+  }
+
+  #reviewIMG {
+    min-width: 70px;
+    max-width: 70px;
+    min-height: 100px;
+    max-height: 100px;
   }
 
   #profileContainer {
@@ -441,6 +449,64 @@ padding: 5px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
+ #usernameWrapperProfilePage {
+  font-size: 40px;
+  color: #f94f04 !important;
+  margin-top: 20px;
+  margin-bottom: 30px;
+ }
+
+ #sauceInfo span {
+  font-size: 25px;
+  margin-right: 10px;
+ }
+
+ #profileButton {
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: 20px;
+  color: black;
+  width: 200px;
+  border: solid;
+  padding: 10px;
+  border-radius: 6px;
+  border-color: black;
+  border-width: 2px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.15);
+  text-decoration: none !important;
+ }
+
+ #profileButton:hover {
+  color: white;
+  background-color: #04912e;
+  border-color: white;
+}
+
+#profileButton:active {
+  transform: translateY(2.5px);
+}
+
+#viewReviewButton {
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: 15px;
+  color: black;
+  width: 100px;
+  height:50px;
+  border: solid;
+  padding: 10px;
+  border-radius: 6px;
+  border-color: black;
+  border-width: 2px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.15);
+  text-decoration: none !important;
+}
+ 
 
 
 
