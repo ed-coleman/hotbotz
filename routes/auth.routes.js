@@ -114,7 +114,7 @@ router.post("/login", isLoggedOut, async (req, res) => {
 /* GET PROFILE PAEG */
 router.get("/profile", isLoggedIn, async (req, res) => {
 const myReviews = await Review.find({addedBy:req.session.user._id}).populate("sauce")
-console.log(myReviews)
+
 const mySauces = await Sauce.find({addedBy:req.session.user._id})
 const updatedMySauces = JSON.parse(JSON.stringify(mySauces))
 //had to add this because user is giving me errors

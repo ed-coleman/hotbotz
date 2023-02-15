@@ -15,14 +15,14 @@
 <p><b>Lost in the sauce since:</b> <%= user.createdAt %></p>
 <p><b>Level: </b>
 
-<% if (updatedMySauces.length === 0) { %>
-Beginner
-<% } else if (updatedMySauces.length > 500) { %>
-Spice Lord
+<% if (updatedMySauces.length > 500) { %>
+Spice Lord <img src="https://cdn-icons-png.flaticon.com/128/5136/5136942.png" width="20">
 <% } else if (updatedMySauces.length > 10) { %>
-Advanced
+Advanced <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png" width="20">
 <% } else if (updatedMySauces.length > 5) { %>
-Intermediate
+    Intermediate <img src="https://cdn-icons-png.flaticon.com/128/3813/3813071.png" width="20">
+    <% } else if (updatedMySauces.length === 0) { %>
+        Intermediate <img src="https://cdn-icons-png.flaticon.com/128/3813/3813071.png" width="20">
 <% } %>
  
     
