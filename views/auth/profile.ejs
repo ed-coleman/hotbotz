@@ -25,18 +25,36 @@
     
 </div>
 <h2>Sauces added by me</h2>
-<% updatedMySauces.forEach(sauce => { %>
-<div style="border: 1px solid black; margin:10px;padding:10px;width:350px;">
-    <a href="/sauces/<%= sauce._id %>"><img src="<%= sauce.image %>" width="50"></a>
-    
-    <p><a href="/sauces/<%= sauce._id %>"><%= sauce.name %></a></br>
-    <span style="font-size:12px;">By <%= sauce.manufacturer %></span></br>
-    <span style="font-size:12px;">Added: <%= sauce.created %></span></p>
-
-    <a href="/sauces/<%= sauce._id %>/edit"><button>Edit</button></a> 
-    <a href="/sauces/<%= sauce._id %>/delete"><button>Delete</button></a> 
-</div>
-<% }) %>
+<% if (updatedMySauces.length !== 0) { %>
+    <% updatedMySauces.forEach(sauce => { %>
+        <div style="border: 1px solid black; margin:10px;padding:10px;width:350px;">
+            <a href="/sauces/<%= sauce._id %>"><img src="<%= sauce.image %>" width="50"></a>
+            
+            <p><a href="/sauces/<%= sauce._id %>"><%= sauce.name %></a></br>
+            <span style="font-size:12px;">By <%= sauce.manufacturer %></span></br>
+            <span style="font-size:12px;">Added: <%= sauce.created %></span></p>
+        
+            <a href="/sauces/<%= sauce._id %>/edit"><button>Edit</button></a> 
+            <a href="/sauces/<%= sauce._id %>/delete"><button>Delete</button></a> 
+        </div>
+        <% }) %>
+<% } else { %>
+<p>No sauces added yet. <a href="/sauces/add">Add your first sauce</a></p>
+<% } %>
 
 <h2>Reviews added by me</h2>
-<p>Coming soon</p>
+<% if (myReviews.length !== 0) { %>
+    <% myReviews.forEach(review => { %>
+        <div style="border: 1px solid black; margin:10px;padding:10px;width:350px;">
+            <a href="/sauces/<%= review.sauce._id %>"><img src="<%= review.sauce.image %>" width="50"></a>
+    
+            <p><a href="/sauces/<%= review.sauce._id %>"><%= review.sauce.name %></a></br>
+                <p>Spice: <%= review.spiceLevel %></br>
+                <p>Rating: <%= review.rating %></br>
+                <p>Review: <%= review.review %></br>
+            <a href="/sauces/"><button>View review</button></a> 
+        </div>
+        <% }) %>
+<% } else { %>
+<p>No reviews added yet</p>
+<% } %>

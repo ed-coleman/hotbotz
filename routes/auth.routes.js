@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 const User = require('../models/User.model');
 const { isLoggedIn, isLoggedOut } = require('../middleware/route-guard');
 const Sauce = require('../models/Sauce.model');
+const Review = require('../models/Review.model');
 const router = express.Router();
 //registered this router in app.js, /auth is in front of every route
 
@@ -112,6 +113,8 @@ router.post("/login", isLoggedOut, async (req, res) => {
 
 /* GET PROFILE PAEG */
 router.get("/profile", isLoggedIn, async (req, res) => {
+const myReviews = await Review.find({addedBy:req.session.user._id}).populate("sauce")
+console.log(myReviews)
 const mySauces = await Sauce.find({addedBy:req.session.user._id})
 const updatedMySauces = JSON.parse(JSON.stringify(mySauces))
 //had to add this because user is giving me errors
@@ -129,7 +132,7 @@ updatedMySauces.map(sauce =>{
 const userDate = new Date (req.session.user.createdAt)
 req.session.user.createdAt = changeDateFormat(userDate)
 
-  res.render("auth/profile", {user:req.session.user, updatedMySauces, myUser})
+  res.render("auth/profile", {user:req.session.user, updatedMySauces, myReviews, myUser})
 });
 
 /* GET EDIT PROFILE */

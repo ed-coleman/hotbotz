@@ -114,7 +114,6 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
         //get 5 random sauces
         const randomSauces = await Sauce.aggregate([ { $sample: { size: 5 } } ]).limit(5)
         const sauceReviews = await Review.find( { sauce: sauceId } ).populate("addedBy")
-        console.log(sauceReviews)
         res.render("sauces/details", {user:req.session.user, selectedSauce, randomSauces, sauceReviews})
       } catch (error) {
         console.log("Sauce details page failed to render", error)
