@@ -51,10 +51,11 @@ router.get("/all", isLoggedIn, async (req, res) => {
       const addedSauce = req.body.name
 
       //validation blank name entered
-      if(addedSauce ==""){
+      if(!addedSauce){
         res.render('sauces/add', {
-          errorMessage: "Please enter a sauce", 
-          user:req.session.user
+          errorMessage: "Please enter a sauce",
+          errorCode: undefined,
+          user:req.session.user,
         })
       }
 
