@@ -5,8 +5,8 @@
   </head>
 </head>
 
-<%= selectedSauce  %>
-<form id="addSauceDetailsForm" action="/addReview" method="POST">
+
+<form id="addSauceDetailsForm" action="/sauces/<%= selectedSauce._id %>/addReview" method="POST">
     
     <label>Sauce Name:<input type="text" name="sauce" value="<%= selectedSauce.name %>" style="border:none" readonly/></label><br/>
     <label>Spice Level:

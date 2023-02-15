@@ -10,14 +10,17 @@ const reviewSchema = new Schema(
             required: true,
         },
         spiceLevel: {
+            type: String,
             required: true,
             enum: ["🌶️", "🌶️🌶️", "🌶️🌶️🌶️", "🌶️🌶️🌶️🌶️", "🌶️🌶️🌶️🌶️🌶️"],
         },
-        rating: { required: true,
+        rating: { 
+            type: String,
+            required: true,
             enum: ["⭐️", "⭐️⭐️", "⭐️⭐️⭐️", "⭐️⭐️⭐️⭐️", "⭐️⭐️⭐️⭐️⭐️"],
         },
         review: {
-            type: 'String',
+            type: String,
             maxLength: 200,
         },
         addedBy: {

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { isLoggedIn, isLoggedOut } = require('../middleware/route-guard');
+const Review = require('../models/Review.model');
 const Sauce = require('../models/Sauce.model');
 
 
@@ -158,30 +159,19 @@ router.get("/:id/addReview", isLoggedIn, async (req, res) => {
 }
 })
 
+
 router.post("/:id/addReview", isLoggedIn, async (req, res) => { 
+  req.body.addedBy = req.session.user._id
+  console.log(req.body.addedBy)
   const sauceId = req.params.id
+  const reviewToAdd = req.body
+  const newReview = await Review.create(reviewToAdd)
+  console.log(reviewToAdd)
+  console.log(newReview)
 res.redirect(`/sauces/${sauceId}`)
 })
 
-router.post("/add-details", isLoggedIn, async (req, res) => {
-  try {
 
-    if(req.body.image == ""){
-      req.body.image = undefined
-    }
-
-      req.body.addedBy = req.session.user._id
-    
-      const newSauce = req.body
-      const addedSauce = await Sauce.create(newSauce)
-      res.redirect(`/sauces/${addedSauce._id}`)
-
-  } catch (error) {
-
-  
-    console.log(error)
-  }
-});
 
 
   
