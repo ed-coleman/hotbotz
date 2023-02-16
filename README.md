@@ -119,6 +119,8 @@ User model
 ```
 username: String
 password: String
+avatar: String
+bio: String
 ```
 
 Sauces model
@@ -126,7 +128,7 @@ Sauces model
 ```
     name::String 
     image:String
-	  ingredients: String
+    ingredients: String
     peppers: String
     description: String
     scoville: Number
@@ -141,7 +143,7 @@ Reviews model
 ```
     sauce:Schema.Types.ObjectId 
     spiceLevel:String (enum)
-	  rating: String (enum)
+    rating: String (enum)
     review: String
     addedBy: Schema.Types.ObjectId
 ``` 
@@ -154,13 +156,13 @@ Reviews model
 
 ### Git
 
-[Repository Link]([https://github.com/sorfbourt/sauce-code](https://github.com/ed-coleman/hotbotz/))
+[Repository Link](https://github.com/ed-coleman/hotbotz/)
 
-[Deploy Link]([http://heroku.com](https://hot-botz.adaptable.app/auth/login))
+[Deploy Link](https://hot-botz.adaptable.app/auth/login)
 
 ### Slides
 
-[Slides Link]([http://slides.com](https://docs.google.com/presentation/d/1teTH95VxNVkIeHDJxwP0KQ37ikiYDvrbPuBtWB5mrIM/edit#slide=id.p))
+[Slides Link](https://docs.google.com/presentation/d/1teTH95VxNVkIeHDJxwP0KQ37ikiYDvrbPuBtWB5mrIM/edit#slide=id.p)
 
 ### Jamboard
 
@@ -168,8 +170,10 @@ Reviews model
 
 ### Project Brief
 Made during IronHack Full Stack Developement Course
+
 [IronHack Project Brief Link](https://docs.google.com/presentation/d/1wVshcIEj0g_DzH5tzNfThzMd3-EFDnwA/edit#slide=id.p1)
 
 ### Made By
-- [Ed Coleman] https://github.com/ed-coleman
-- [Krystina Witt] https://github.com/sorfbourt
+[Ed Coleman](https://github.com/ed-coleman)
+
+[Krystina Witt](https://github.com/sorfbourt)
