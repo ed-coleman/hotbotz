@@ -29,13 +29,12 @@ Advanced <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png" widt
     
 </p>
 
+
 <p><b>Sauces added:</b> <%= updatedMySauces.length %></p>
 <p><b>Bio:</b> <%= myUser.bio %></p>
+<p><b>Reviews added:</b> <%= myReviews.length %></p>
+<p><b>Bio:</b> <%= myUser.bio %></p>
 </div>
-<div id="sauceInfo">
-<p><span>Sauces added:</span> <%= updatedMySauces.length %></p>
-<p><span>Reviews added:</span> <%= myReviews.length %></p>
-<p><span>Bio:</span> <%= myUser.bio %></p>
 
 
 
@@ -45,10 +44,10 @@ Advanced <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png" widt
     <button id="profileButton" onclick="window.location.href='/auth/profile/edit'">Edit Your Profile</button>
     
 </div>
-</div>
+
 <hr>
 <div id="buffer"></div>
-<div id="sauceInfo">
+
 <h2>Sauces added by me</h2>
 <div id="rowContainer">
 
@@ -88,7 +87,7 @@ Advanced <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png" widt
                 <p>Review: <%= review.review %></br>
             <div><a href="/sauces/<%= review.sauce._id %>"><button id="viewReviewButton">View review</button></a></div> 
         </div>
-        </div>
+       
         <% }) %>
 <% } else { %>
 <p>No reviews added yet</p>
@@ -96,3 +95,5 @@ Advanced <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png" widt
 
 </div>
 </div>
+</div>
+
