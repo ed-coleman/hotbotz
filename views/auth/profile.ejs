@@ -74,24 +74,23 @@ Advanced <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png" widt
 
     <hr>
     <h2>Reviews added by me</h2>
-    <div id="rowContainer">
-
-<% if (myReviews.length !== 0) { %>
-    <% myReviews.forEach(review => { %>
-        <div style="border: 2px solid rgba(230, 230, 230, 0.75); border-radius: 8px; margin:10px;padding:10px;width:350px;">
-            <a href="/sauces/<%= review.sauce._id %>"><img src="<%= review.sauce.image %>" width="50"></a>
-    
-            <p><a href="/sauces/<%= review.sauce._id %>"><%= review.sauce.name %></a></br>
-                <p>Spice: <%= review.spiceLevel %></br>
-                <p>Rating: <%= review.rating %></br>
-                <p>Review: <%= review.review %></br>
-            <div><a href="/sauces/<%= review.sauce._id %>"><button id="viewReviewButton">View review</button></a></div> 
-        </div>
-       
-        <% }) %>
-<% } else { %>
-<p>No reviews added yet</p>
-<% } %>
+<div id="rowContainer">
+    <% if (myReviews.length !== 0) { %>
+        <% myReviews.forEach(review => { %>
+            <div style="border: 2px solid rgba(230, 230, 230, 0.75); border-radius: 8px; margin:10px;padding:10px;width:350px;">
+                <a href="/sauces/<%= review.sauce._id %>"><img src="<%= review.sauce.image %>" width="50"></a>
+        
+                <p><a href="/sauces/<%= review.sauce._id %>"><%= review.sauce.name %></a></br>
+                    <p>Spice: <%= review.spiceLevel %></br>
+                    <p>Rating: <%= review.rating %></br>
+                    <p>Review: <%= review.review %></br>
+                <div><a href="/sauces/<%= review.sauce._id %>"><button id="viewReviewButton">View review</button></a></div> 
+            </div>
+           
+            <% }) %>
+    <% } else { %>
+    <p>No reviews added yet</p>
+    <% } %>
 
 </div>
 </div>

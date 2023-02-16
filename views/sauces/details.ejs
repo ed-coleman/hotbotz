@@ -19,7 +19,7 @@
 <p><span class="bold">Added By: </span>
     <img src="<%= selectedSauce.addedBy.avatar %>" width="20"> <%= selectedSauce.addedBy.username %></p>
     
-<p><span class="bold"></span><a href="<%= selectedSauce.link %>" target="_blank">Buy This Sauce</a></p>
+<p><span class="bold">Link: </span><a href="<%= selectedSauce.link %>" target="_blank">Buy This Sauce</a></p>
 <a href="<%= selectedSauce._id %>/addReview"><button id="submitReviewButton">Leave a Review</button></a>
 
 
@@ -35,19 +35,28 @@
 
 <div id="sauceInfo">
 <h2 id="reviewsHeader">Reviews</h2>
-<% sauceReviews.forEach(review => { %>
-<p><span class="bold">Reviewed By:</span> <img src="<%= review.addedBy.avatar %>" width="20"> <%= review.addedBy.username %></p>
-<p><span class="bold">Rating:</span> <%= review.rating %></p>
-<p><span class="bold">Spice Level: </span> <%= review.spiceLevel %></p>
-<p><%= review.review %></p>
- 
-<% }) %>
+
+<% if (sauceReviews.length !== 0) { %>
+
+    <div id="reviews">
+    <% sauceReviews.forEach(review => { %>
+        <p><span class="bold">Reviewed By:</span> <img src="<%= review.addedBy.avatar %>" width="20"> <%= review.addedBy.username %></p>
+        <p><span class="bold">Rating:</span> <%= review.rating %></p>
+        <p><span class="bold">Spice Level: </span> <%= review.spiceLevel %></p>
+        <p><%= review.review %></p>
+
+        <hr>    
+    </div>    
+        <% }) %>
+<% } else { %>
+    <p>No reviews added yet. <a href="/sauces/<%= selectedSauce._id %>/addReview">Be the first!</a></p>
+    <% } %>
 
 
 
 <hr>
 </div>
-
+<div id="sauceInfo">
 <h2 id="reviewsHeader">You might also like these...</h2>
 
 <div id="sauceDisplayDetails" style="display:flex;flex-wrap: wrap;">
@@ -63,5 +72,6 @@
     </div>
 
     <% }) %>
+</div>
 </div>
 </div>

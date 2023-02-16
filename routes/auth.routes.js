@@ -131,7 +131,7 @@ updatedMySauces.map(sauce =>{
 //add formatted user date
 const userDate = new Date (req.session.user.createdAt)
 req.session.user.createdAt = changeDateFormat(userDate)
-
+console.log("myReviews:", myReviews)
   res.render("auth/profile", {user:req.session.user, updatedMySauces, myReviews, myUser})
 });
 

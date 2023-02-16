@@ -668,3 +668,7 @@ input:focus {
   margin-bottom: 30px;
   color: #f94f04;
 }
+
+.bold{
+  font-weight:bold;
+}
