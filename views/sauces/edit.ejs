@@ -5,11 +5,8 @@
 </head>
 
 
-
-<div id="sauceInfo">
-    
-<form id="editAddedSauceForm" action="/sauces/<%= editedSauceInfo._id %>/edit" method="POST">
-    <h1 id="editSauceHeader">Edit Details About This Sauce</h1>
+<form id="editSauceForm" action="/sauces/<%= editedSauceInfo._id %>/edit" method="POST">
+    <h1>Edit Sauce</h1>
     <label>Name: <input type="text" name="name" value="<%= editedSauceInfo.name %>"/></label><br/>
     <label>Manufacturer: <input type="text" name="manufacturer" placeholder="Required" value="<%= editedSauceInfo.manufacturer %>"/></label><br/>
     <label>Image URL: <input type="text" name="image" placeholder="Required" value="<%= editedSauceInfo.image %>"/></label><br/>
