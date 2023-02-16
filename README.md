@@ -18,16 +18,6 @@ Hotsauce database with reviews
 - Add reviews
 - Update profile info
 
-## Future
-- Remove nav bar items when logged in/out
-- Suggest edits to sauce entries
-- Edit/delete reviews
-- Responsive
-- Add more filters (eg. most reviewed, order by manufacturer)
-- View other users profile
-- Upload images instead of URL’s
-
-
 ## User Stories
 
 - **404** - As a user I want to see a nice 404 page when I go to a page that doesn’t exist so that I know it was my fault 
@@ -44,9 +34,13 @@ Hotsauce database with reviews
 ## Backlog
 
 List of other features outside of the MVPs scope
-
-Filters:
--sort hot sauces by several options including review scores
+- Remove nav bar items when logged in/out
+- Suggest edits to sauce entries
+- Edit/delete reviews
+- Responsive
+- Add more filters (eg. most reviewed, order by manufacturer)
+- View other users profile
+- Upload images instead of URL’s
 
 
 
