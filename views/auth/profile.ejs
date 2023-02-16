@@ -8,7 +8,6 @@
   <div id="sauceInfo">
     <div id="profileContent">
 <h2>
-
     <% if (myUser.avatar) { %>
         <img src="<%= myUser.avatar %>" width="30" style="margin-right:30px;">
     <% } %>
@@ -20,21 +19,16 @@
 <% if (updatedMySauces.length > 500) { %>
 Spice Lord <img src="https://cdn-icons-png.flaticon.com/128/5136/5136942.png" width="20">
 <% } else if (updatedMySauces.length > 10) { %>
-Tabasco Titan <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png" width="20">
+Advanced <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png" width="20">
 <% } else if (updatedMySauces.length > 5) { %>
-     Jalapeno Joe <img src="https://cdn-icons-png.flaticon.com/128/3813/3813071.png" width="20">
+    Intermediate <img src="https://cdn-icons-png.flaticon.com/128/3813/3813071.png" width="20">
     <% } else if (updatedMySauces.length === 0) { %>
-        Sauce Newb <img src="https://cdn-icons-png.flaticon.com/128/3813/3813071.png" width="20">
+        Intermediate <img src="https://cdn-icons-png.flaticon.com/128/3813/3813071.png" width="20">
 <% } %>
-
-</span>
+ 
+    
 </p>
 
-</div>
-<div id="sauceInfo">
-<p><span>Sauces added:</span> <%= updatedMySauces.length %></p>
-<p><span>Reviews added:</span> <%= myReviews.length %></p>
-<p><span>Bio:</span> <%= myUser.bio %></p>
 <p><b>Sauces added:</b> <%= updatedMySauces.length %></p>
 <p><b>Bio:</b> <%= myUser.bio %></p>
 </div>
@@ -72,17 +66,10 @@ Tabasco Titan <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png"
 <p>No sauces added yet. <a href="/sauces/add">Add your first sauce</a></p>
 <% } %>
 </div>
-</div>
 
 <div id="buffer"></div>
 
     <hr>
-<h2>Reviews added by me</h2>
-<% if (myReviews.length !== 0) { %>
-    <% myReviews.forEach(review => { %>
-        <div style="border: 1px solid black; margin:10px;padding:10px;width:350px;">
-            <a href="/sauces/<%= review.sauce._id %>"><img id="reviewIMG" src="<%= review.sauce.image %>" width="50"></a>
-            <div id="viewReviewButtonContainer">
     <h2>Reviews added by me</h2>
     <div id="rowContainer">
 
@@ -102,6 +89,5 @@ Tabasco Titan <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png"
 <p>No reviews added yet</p>
 <% } %>
 
-</div>
 </div>
 </div>
