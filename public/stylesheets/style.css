@@ -255,7 +255,7 @@ label {
 
 #sideMenuContent {
   margin-top: 30px;
-  font-family: "Sofia Sans Condensed", sans-serif ;
+  font-family: "Sofia Sans Condensed", sans-serif;
   font-size: x-large;
   display: flex;
   flex-direction: column;
@@ -264,18 +264,18 @@ label {
 #sideMenuContent a {
   padding-top: 60px;
   padding-left: 20px;
-font-size: 1.5em;
-text-decoration: none;
-color: #f94f04
+  font-size: 1.5em;
+  text-decoration: none;
+  color: #f94f04;
 }
 
 #headerWrapperAddSauceDetail {
-  font-family: "Sofia Sans Condensed", sans-serif ;
+  font-family: "Sofia Sans Condensed", sans-serif;
   margin-bottom: 30px;
   color: #f94f04;
 }
 
-#reviewsHeader {
+#reviewsContainer {
   font-family: "Sofia Sans Condensed", sans-serif;
   border: #f94f04;
   border-style: none;
@@ -293,7 +293,7 @@ color: #f94f04
 }
 
 #sauceInfo {
-padding: 5px;
+  padding: 5px;
   margin-left: 100px;
   max-width: 90vw;
   font-family: "Sofia Sans Condensed", sans-serif;
@@ -301,77 +301,62 @@ padding: 5px;
   font-size: larger;
 }
 
-
-#sauceInfo a{
+#sauceInfo a {
   padding: 5px;
   color: #f94f04;
   text-decoration: none;
 }
 
-  #sauceInfo a:hover {
-    text-decoration-line: underline !important;
-    text-decoration-thickness: 1.5px !important;
-  }
-  
-  #sauceInfo a:active {
-    color: #04912e !important;
-  }
+#sauceInfo a:hover {
+  text-decoration-line: underline !important;
+  text-decoration-thickness: 1.5px !important;
+}
 
+#sauceInfo a:active {
+  color: #04912e !important;
+}
 
-  #sauceTitle {
-    margin-bottom: 30px;
-    margin-left: -10px;
-  }
+#sauceTitle {
+  margin-bottom: 30px;
+  margin-left: -10px;
+}
 
-  #footerText {
-    color: white;
-    text-decoration: none !important;
-  }
+#footerText {
+  color: white;
+  text-decoration: none !important;
+}
 
-  #socialText {
-    font-family: "Sofia Sans Condensed", sans-serif !important;
-    color: #f94f04;
-    margin-bottom: -10px;
-  }
+#socialText {
+  font-family: "Sofia Sans Condensed", sans-serif !important;
+  color: #f94f04;
+  margin-bottom: -10px;
+}
 
-  #icons {
-    margin-bottom: -15px;
-    color: #f94f04;
-  }
-  
-  #footerContent {
-    color: #f94f04;
-    font-family: "Sofia Sans Condensed", sans-serif !important;
-    font-size: 20px;
-    text-decoration: none !important;
-  }
-  
-  #footerContent a {
-    text-decoration: none !important;
-  }
+#icons {
+  margin-bottom: -15px;
+  color: #f94f04;
+}
 
-  #addReviewForm {
-    width: 500px;
-    margin-left: 50px;
-    margin-top: 200px;
-    margin-bottom: 1000px;
-    font-family: "Sofia Sans Condensed", sans-serif;
+#footerContent {
+  color: #f94f04;
+  font-family: "Sofia Sans Condensed", sans-serif !important;
+  font-size: 20px;
+  text-decoration: none !important;
+}
+
+#footerContent a {
+  text-decoration: none !important;
+}
+
+#addReviewForm {
+  width: 500px;
+  margin-left: 50px;
+  margin-top: 200px;
+  margin-bottom: 1000px;
+  font-family: "Sofia Sans Condensed", sans-serif;
   font-size: larger;
   width: 50px;
   height: 40px;
-  flex-direction: column;
-}
-
-#editAddedSauceForm {
-  width: 500px;
-  margin-left: 50px;
-  margin-top: 170px;
-  margin-bottom: 1000px;
-  font-family: "Sofia Sans Condensed", sans-serif;
-  font-size: medium;
-  width: 50px;
-  height: 40px;
-
 }
 
 #deleteSauceInfo {
@@ -499,63 +484,6 @@ textarea:focus {
   margin-bottom: 30px;
 }
 
-#editAddedSauceForm input {
-  width: 350px
-}
-#sauceNameWrapper {
-  font-size: 25px;
-}
-
-#sauceNameWrapper span {
-  font-size: 35px;
-}
-#sauceNameWrapper input {
-  color: #f94f04;
-}
-
-#description {
-  width: 600px;
-}
-
-#description :focus, textarea:focus {
-  border: 2px solid #04912e !important;
-  box-shadow: 0 0 1px #04912e !important;
-  -moz-box-shadow: 0 0 1px #04912e !important;
-  -webkit-box-shadow: 0 0 1px #04912e !important;
-  outline: none !important;
-}
-
-#submitReviewButton {
-  font-family: "Sofia Sans Condensed", sans-serif;
-  font-size: 25px;
-  color: black;
-  width: 150px;
-  border: solid;
-  padding: 10px;
-  border-radius: 6px;
-  border-color: black;
-  border-width: 2px;
-  margin-left: 20px;
-  margin-bottom: 50px;
-  margin-top: 20px;
-  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.15);
-  text-decoration: none !important;
-}
-
-#submitReviewButton:hover {
-  color: white;
-  background-color: #f94f04;
-  border-color: white;
-}
-
-#submitReviewButton:active {
-  transform: translateY(2.5px);
-}
-
-#reviewsHeader {
-  margin-bottom: 30px;
-}
-
 #sauceDisplayDetails {
   font-family: "Sofia Sans Condensed", sans-serif;
   margin-top: 20px;
@@ -571,121 +499,23 @@ textarea:focus {
   margin-bottom: 20px;
 }
 
-#usernameWrapperProfilePage {
-  font-size: 40px;
-  color: #f94f04 !important;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-#sauceInfo span {
-  font-size: 25px;
-  margin-right: 10px;
-}
-
-#profileButton {
-  font-family: "Sofia Sans Condensed", sans-serif;
-  font-size: 20px;
-  color: black;
-  width: 200px;
-  border: solid;
-  padding: 10px;
-  border-radius: 6px;
-  border-color: black;
-  border-width: 2px;
-  margin-left: 20px;
-  margin-bottom: 50px;
-  margin-top: 30px;
-  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.15);
-  text-decoration: none !important;
-}
-
-#profileButton:hover {
-  color: white;
-  background-color: #04912e;
-  border-color: white;
-}
-
-#profileButton:active {
-  transform: translateY(2.5px);
-}
-
-#profileEditButton {
-  font-family: "Sofia Sans Condensed", sans-serif;
-  font-size: 20px;
-  color: black;
-  width: 160px;
-  border: solid;
-  padding: 10px;
-  border-radius: 6px;
-  border-color: black;
-  border-width: 2px;
-  margin-left: 20px;
-  margin-bottom: 50px;
-  margin-top: 30px;
-  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.15);
-  text-decoration: none !important;
-
-}
-
-#profileEditButton:hover {
-  color: white;
-  background-color: #04912e;
-  border-color: white;
-}
-
-#profileEditButton:active {
-  transform: translateY(2.5px);
-}
-
-#viewReviewButton {
-  font-family: "Sofia Sans Condensed", sans-serif;
-  font-size: 15px;
-  color: black;
-  width: 90px;
-  height: 50px;
-  border: solid;
-  padding: 10px;
-  border-radius: 6px;
-  border-color: black;
-  border-width: 2px;
-  margin-left: 20px;
-  margin-bottom: 50px;
-  margin-top: 20px;
-  box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.15);
-  text-decoration: none !important;
-}
-
-#viewReviewButton:hover {
-  color: white;
-  background-color: #04912e;
-  border-color: white;
-}
-
-#viewReviewButton:active {
-  transform: translateY(2.5px);
-}
-
-
-
-#profileEditInfo {
-  width: 500px;
-  margin-left: 150px;
+#editProfileForm {
   margin-top: 150px;
+  width: 800px;
+  margin-left: 120px;
   margin-bottom: 1000px;
   font-family: "Sofia Sans Condensed", sans-serif;
-  font-size: larger;
-  padding: 10px;
-  width: 50px;
+  font-size: 25px;
+  width: 500px;
   height: 40px;
-  flex-direction: column;
 }
 
-#profileEditInfo input {
-  width: 300px;
-  
+#editProfileForm input {
+  width: 320px;
 }
-#profileEditInfo:focus, input:focus {
+
+#editProfileForm:focus,
+input:focus {
   border: 2px solid #04912e !important;
   box-shadow: 0 0 1px #04912e !important;
   -moz-box-shadow: 0 0 1px #04912e !important;
