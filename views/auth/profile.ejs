@@ -32,6 +32,10 @@ Advanced <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png" widt
 <p><b>Sauces added:</b> <%= updatedMySauces.length %></p>
 <p><b>Bio:</b> <%= myUser.bio %></p>
 </div>
+<div id="sauceInfo">
+<p><span>Sauces added:</span> <%= updatedMySauces.length %></p>
+<p><span>Reviews added:</span> <%= myReviews.length %></p>
+<p><span>Bio:</span> <%= myUser.bio %></p>
 
 
 
@@ -82,7 +86,8 @@ Advanced <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png" widt
                 <p>Spice: <%= review.spiceLevel %></br>
                 <p>Rating: <%= review.rating %></br>
                 <p>Review: <%= review.review %></br>
-            <a href="/sauces/"><button id="viewReviewButton">View review</button></a> 
+            <div><a href="/sauces/<%= review.sauce._id %>"><button id="viewReviewButton">View review</button></a></div> 
+        </div>
         </div>
         <% }) %>
 <% } else { %>
