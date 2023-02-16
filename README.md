@@ -17,6 +17,7 @@ Hotsauce database with reviews
 - Update profile info
 
 ## Future
+- Remove nav bar items when logged in/out
 - Suggest edits to sauce entries
 - Edit/delete reviews
 - Responsive
