@@ -85,12 +85,12 @@ Filters:
   - body: 
   - name
 	- manufacturer
-	-image
-	-ingredients
-	-peppers
-	-description-scoville
-	-country
-	-link
+	- image
+	- ingredients
+	- peppers
+	- description-scoville
+	- country
+	- link
 
 - GET /sauces/:id
   - renders the specific hotsauce detail page
@@ -126,26 +126,26 @@ bio: String
 Sauces model
 
 ```
-    name::String 
-    image:String
-    ingredients: String
-    peppers: String
-    description: String
-    scoville: Number
-    originCountry:String (enum)
-    manufacturer:String
-    link: String
-    addedBy: [ObjectId<User>]
+name::String 
+image:String
+ingredients: String
+peppers: String
+description: String
+scoville: Number
+originCountry:String (enum)
+manufacturer:String
+link: String
+addedBy: [ObjectId<User>]
 ``` 
 
 Reviews model
 
 ```
-    sauce:Schema.Types.ObjectId 
-    spiceLevel:String (enum)
-    rating: String (enum)
-    review: String
-    addedBy: Schema.Types.ObjectId
+sauce:[ObjectId<Sauce>]
+spiceLevel:String (enum)
+rating: String (enum)
+review: String
+addedBy: [ObjectId<User>]
 ``` 
 
 ## Links
@@ -169,7 +169,7 @@ Reviews model
 [Jamboard Link](https://jamboard.google.com/d/1ggvDK6B08BrLkbLSlpbDpr_J_ZDV6GAcBokeK6s58OE/viewer?ts=63e4d7aa&actionButton=1&f=0)
 
 ### Project Brief
-Made during IronHack Full Stack Developement Course
+Made during IronHack Full Stack Development Course
 
 [IronHack Project Brief Link](https://docs.google.com/presentation/d/1wVshcIEj0g_DzH5tzNfThzMd3-EFDnwA/edit#slide=id.p1)
 
