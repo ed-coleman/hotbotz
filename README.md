@@ -1,5 +1,7 @@
 # Hotbotz
-![image](https://user-images.githubusercontent.com/120404332/219393208-58a502e4-31cc-4e71-9871-261152949a69.png)
+[![image](https://user-images.githubusercontent.com/120404332/219393208-58a502e4-31cc-4e71-9871-261152949a69.png)](https://hot-botz.adaptable.app/)
+
+
 ## Get started
 
 ```
