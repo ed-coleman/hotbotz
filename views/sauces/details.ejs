@@ -18,6 +18,7 @@
 <p><span class="bold">Manufacturer: </span><%= selectedSauce.manufacturer %></p>
 <p><span class="bold">Added By: </span>
     <img src="<%= selectedSauce.addedBy.avatar %>" width="20"> <%= selectedSauce.addedBy.username %></p>
+    
 <p><span class="bold"></span><a href="<%= selectedSauce.link %>" target="_blank">Buy This Sauce</a></p>
 <a href="<%= selectedSauce._id %>/addReview"><button id="submitReviewButton">Leave a Review</button></a>
 
@@ -35,7 +36,7 @@
 <div id="sauceInfo">
 <h2 id="reviewsHeader">Reviews</h2>
 <% sauceReviews.forEach(review => { %>
-<p><span class="bold">Reviewed By:</span> <%= review.addedBy.username %></p>
+<p><span class="bold">Reviewed By:</span> <img src="<%= review.addedBy.avatar %>" width="20"> <%= review.addedBy.username %></p>
 <p><span class="bold">Rating:</span> <%= review.rating %></p>
 <p><span class="bold">Spice Level: </span> <%= review.spiceLevel %></p>
 <p><%= review.review %></p>

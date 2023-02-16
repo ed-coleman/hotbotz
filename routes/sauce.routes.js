@@ -51,10 +51,11 @@ router.get("/all", isLoggedIn, async (req, res) => {
       const addedSauce = req.body.name
 
       //validation blank name entered
-      if(addedSauce ==""){
+      if(!addedSauce){
         res.render('sauces/add', {
-          errorMessage: "Please enter a sauce", 
-          user:req.session.user
+          errorMessage: "Please enter a sauce",
+          errorCode: undefined,
+          user:req.session.user,
         })
       }
 
@@ -93,7 +94,7 @@ router.get("/all", isLoggedIn, async (req, res) => {
 
 router.post("/add-details", isLoggedIn, async (req, res) => {
   try {
-
+  
     if(req.body.image == ""){
       req.body.image = undefined
     }
@@ -103,11 +104,20 @@ router.post("/add-details", isLoggedIn, async (req, res) => {
       const newSauce = req.body
       const addedSauce = await Sauce.create(newSauce)
       res.redirect(`/sauces/${addedSauce._id}`)
-
-  } catch (error) {
-
-  
-    console.log(error)
+      
+    } catch (error) {
+    console.log("error on add-details page:", error)
+    
+    //validation blank name entered
+    if(req.body.manufacturer == "" || req.body.ingredients == "" || req.body.peppers == "" || req.body.description == "" || req.body.image == ""){
+      
+      res.render('sauces/add-details', {
+        errorMessage: error,
+        errorCode: undefined,
+        user:req.session.user,
+        addedSauce:req.body.name
+      })
+    }
   }
 });
 
