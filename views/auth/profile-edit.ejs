@@ -3,9 +3,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
 </head>
-<h1>Edit profile</h1>
 
-<h2><img src="<%= userProfile[0].avatar %>" width="30" style="margin-right:30px;">Hello <%= userProfile[0].username %>!</h2>
+<div id="editProfileForm">
+    <div id="editProfileHeaderWrapper">
+        <img id="userProfileIMG" src="<%= userProfile[0].avatar %>" width="30" style="margin-right:30px;">
+<h2>Hello <%= userProfile[0].username %>!</h2>
+</div>
+
 <form method="post" action="/auth/profile/edit">
 <label>Username: <input type="text" name="username" value="<%= userProfile[0].username %>" style="border:none;" readonly/></label><br/>
 <label>Profile pic: <input type="text" name="avatar" value="<%= userProfile[0].avatar %>"/></label><br/>
@@ -13,5 +17,6 @@
 </label><br/>
 
 
-<button type="submit">Save Profile</button>
+<button id="editProfileButton" type="submit">Save Profile</button>
 </form>
+</div>

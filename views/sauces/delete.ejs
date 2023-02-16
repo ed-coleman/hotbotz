@@ -1,17 +1,24 @@
-<h1>DELETE</h1>
+<head>
+    <script src="https://kit.fontawesome.com/c1ddb9b33f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@1;300;600;800&family=Sofia+Sans+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
+  </head>
+<div id="deleteSauceForm">
+  
 
-
-<h2>Are you sure you want to delete the below sauce?</h2>
 <form action="/sauces/<%= editedSauceInfo._id %>/delete" method="post">
-<a href="/sauces/<%= editedSauceInfo._id %>/delete"><button>YES, DELETE SAUCE</button></a> 
+    <h2>Are you sure you want to delete the below sauce?</h2>
+    <div>
+<a href="/sauces/<%= editedSauceInfo._id %>/delete"><button id="deleteSauceFormButtons">YES, DELETE SAUCE</button></a> 
 </form>
-<a href="/sauces/<%= editedSauceInfo._id %>/edit"><button>NO, Just EDIT SAUCE</button></a> 
+<a href="/sauces/<%= editedSauceInfo._id %>/edit"><button id="deleteSauceFormButtons">NO, Just EDIT SAUCE</button></a> 
+</div>
 
-<hr>
 
 
-<div id="sauceInfo">
-    <img src="<%= editedSauceInfo.image %>" width="300">
+<div id="deleteSauceInfo">
+    <img id="deleteSauceIMG" src="<%= editedSauceInfo.image %>" width="300">
     <p><span class="bold">Name: </span><%= editedSauceInfo.name %></p>
     <p><span class="bold">Ingredients: </span><%= editedSauceInfo.ingredients %></p>
     <p><span class="bold">Peppers: </span><%= editedSauceInfo.peppers %></p>
@@ -25,5 +32,6 @@
    
 
 
+</div>
 </div>
 

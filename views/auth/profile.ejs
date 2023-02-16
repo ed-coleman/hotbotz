@@ -6,12 +6,13 @@
 
 <div id="profileContainer">
   <div id="sauceInfo">
+    <div id="profileContent">
 <h2>
     <% if (myUser.avatar) { %>
         <img src="<%= myUser.avatar %>" width="30" style="margin-right:30px;">
     <% } %>
     Hello <%= myUser.username %>!</h2>
-
+<div id="bioContent">
 <p><b>Lost in the sauce since:</b> <%= user.createdAt %></p>
 <p><b>Level: </b>
 
@@ -27,17 +28,17 @@ Advanced <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png" widt
  
     
 </p>
-</div>
-<div id="sauceInfo">
+
 <p><b>Sauces added:</b> <%= updatedMySauces.length %></p>
 <p><b>Bio:</b> <%= myUser.bio %></p>
+</div>
 
 
 
 
 <div>
-    <button onclick="window.location.href='/sauces'">See what&apos;s new</button>
-    <button onclick="window.location.href='/auth/profile/edit'">Edit Your Profile</button>
+    <button id="profileButton" onclick="window.location.href='/sauces'">See what&apos;s new</button>
+    <button id="profileButton" onclick="window.location.href='/auth/profile/edit'">Edit Your Profile</button>
     
 </div>
 </div>
@@ -45,41 +46,48 @@ Advanced <img src="https://cdn-icons-png.flaticon.com/128/5014/5014991.png" widt
 <div id="buffer"></div>
 <div id="sauceInfo">
 <h2>Sauces added by me</h2>
+<div id="rowContainer">
+
+
 <% if (updatedMySauces.length !== 0) { %>
     <% updatedMySauces.forEach(sauce => { %>
-        <div style="border: 1px solid black; margin:10px;padding:10px;width:350px;">
+        <div style="border: 2px solid rgba(230, 230, 230, 0.75); border-radius: 8px; margin:10px;padding:10px;width:350px;">
             <a href="/sauces/<%= sauce._id %>"><img src="<%= sauce.image %>" width="50"></a>
             
             <p><a href="/sauces/<%= sauce._id %>"><%= sauce.name %></a></br>
             <span style="font-size:12px;">By <%= sauce.manufacturer %></span></br>
             <span style="font-size:12px;">Added: <%= sauce.created %></span></p>
         
-            <a href="/sauces/<%= sauce._id %>/edit"><button>Edit</button></a> 
-            <a href="/sauces/<%= sauce._id %>/delete"><button>Delete</button></a> 
+            <a href="/sauces/<%= sauce._id %>/edit"><button id="editDeleteButton">Edit</button></a> 
+            <a href="/sauces/<%= sauce._id %>/delete"><button id="editDeleteButton">Delete</button></a> 
         </div>
         <% }) %>
 <% } else { %>
 <p>No sauces added yet. <a href="/sauces/add">Add your first sauce</a></p>
 <% } %>
 </div>
+
 <div id="buffer"></div>
-<div id="sauceInfo">
+
     <hr>
-<h2>Reviews added by me</h2>
+    <h2>Reviews added by me</h2>
+    <div id="rowContainer">
+
 <% if (myReviews.length !== 0) { %>
     <% myReviews.forEach(review => { %>
-        <div style="border: 1px solid black; margin:10px;padding:10px;width:350px;">
+        <div style="border: 2px solid rgba(230, 230, 230, 0.75); border-radius: 8px; margin:10px;padding:10px;width:350px;">
             <a href="/sauces/<%= review.sauce._id %>"><img src="<%= review.sauce.image %>" width="50"></a>
     
             <p><a href="/sauces/<%= review.sauce._id %>"><%= review.sauce.name %></a></br>
                 <p>Spice: <%= review.spiceLevel %></br>
                 <p>Rating: <%= review.rating %></br>
                 <p>Review: <%= review.review %></br>
-            <a href="/sauces/"><button>View review</button></a> 
+            <a href="/sauces/"><button id="viewReviewButton">View review</button></a> 
         </div>
         <% }) %>
 <% } else { %>
 <p>No reviews added yet</p>
 <% } %>
+
 </div>
 </div>
